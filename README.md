@@ -9,3 +9,4 @@
 
 via https://hackmd.io/@T7k0V7TMQFelvJKKdo3pww/ryBaiO2uU
 docker run -it -p 5000:5000 -v $(pwd)/:/home web-app
+python3 app.py

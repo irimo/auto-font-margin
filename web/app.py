@@ -8,9 +8,9 @@ def home():
     return render_template("home.html")
 
 # URLに/aboutと加えると「About Me!」と表示されます
-@app.route('/about')
+@app.route('/about/')
 def about():
-    return "About Me!"
+    return render_template("about.html")
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
