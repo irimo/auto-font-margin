@@ -2,7 +2,7 @@
 from flask import Flask, render_template
 # import cv2
 
-app = Flask(__name__, static_folder='./resource')
+app = Flask(__name__, static_folder='./templates/resource')
 
 @app.route('/')
 def page_index():
