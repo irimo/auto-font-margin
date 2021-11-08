@@ -26,14 +26,23 @@ def page_crop():
     randstr = str(random.randint(1000000000, 10000000000))
     filename:str = "/resource/work/" + randstr + ".jpg"
     im = cv2.imread(law_path)
+    im_gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
     # img[top : bottom, left : right]
     # サンプル1の切り出し、保存
-    img1 = im[click_y : click_y + 200, click_x: click_x + 200]
+    img1 = im_gray[click_y : click_y + 200, click_x: click_x + 200]
     # random.randrange(3, 8)
     cv2.imwrite("." + filename, img1)
     # return cv2.imshow('test', im)
     # return im.shape
     return filename
+
+@app.route('/rinkaku')
+def page_rinkaku():
+    law_path = "./resource/law1.jpg"
+    im = cv2.imread(law_path)
+    img1 = im
+    cv2.imwrite("./resource/hoge.jpg", img1)
+    return '<img src="/resource/hoge.jpg">'
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
