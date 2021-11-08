@@ -26,7 +26,10 @@ window.addEventListener('load', function(){
     context.drawImage(img, 0, 0);
   }
 
-  canvas.addEventListener('click', function() {
-    alert('shuzo');
+  canvas.addEventListener('click', e=>{
+    var r = e.target.getBoundingClientRect();
+    var click_x = e.clientX - r.left;
+    var click_y = e.clientY - r.top;
+    console.log("click point: x = %d, y = %d", click_x, click_y);
   }, false);
 }, false);
