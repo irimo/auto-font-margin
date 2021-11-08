@@ -10,3 +10,16 @@ h1 {
 h2 {
     font-size: 10px;
 }
+
+iframe#frame_all {
+    /* transform: scale(0.5);
+    transform-origin: 0 0; */
+    width: 200%;
+    height: 140%;
+    /* -ms-zoom: 2; */
+}
+
+iframe#frame_several {
+    width: 100%;
+    height: 20%;
+}
