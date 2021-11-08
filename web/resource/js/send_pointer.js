@@ -33,7 +33,10 @@ window.addEventListener('load', function(){
       var frame_several_doc = frame_several.contentDocument || frame_several.contentWindow.document;
       var fonts = frame_several_doc.getElementById('Fonts');
       var a_font_elem = frame_several_doc.getElementById('a_font_img');
-      a_font_elem.src = a_font_path;
+      var a_font_elem2 = a_font_elem.cloneNode(true);
+
+      a_font_elem2.src = a_font_path;
+      fonts.appendChild(a_font_elem2);
     };
     request.send();
 
