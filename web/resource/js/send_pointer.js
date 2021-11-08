@@ -25,4 +25,8 @@ window.addEventListener('load', function(){
     //   context.drawImage(image, sx,sy,sw,sh, dx,dy,dw,dh)
     context.drawImage(img, 0, 0);
   }
+
+  canvas.addEventListener('click', function() {
+    alert('shuzo');
+  }, false);
 }, false);
