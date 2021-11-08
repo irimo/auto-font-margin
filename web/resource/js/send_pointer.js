@@ -29,6 +29,11 @@ window.addEventListener('load', function(){
     request.responseType = 'text';
     request.onload = function() {
       var a_font_path = request.response;
+      var frame_several = document.getElementById('frame_several');
+      var frame_several_doc = frame_several.contentDocument || frame_several.contentWindow.document;
+      var fonts = frame_several_doc.getElementById('Fonts');
+      var a_font_elem = frame_several_doc.getElementById('a_font_img');
+      a_font_elem.src = a_font_path;
     };
     request.send();
 
