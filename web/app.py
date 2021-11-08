@@ -19,7 +19,11 @@ def page_several():
 @app.route('/crop')
 def page_crop():
     # crop 処理をした後、処理後画像を返す
-    return "/work/dummy.jpg"
+    filename:str = "/resource/work/dummy.jpg"
+    # im = cv2.imread(filename)
+    # return cv2.imshow('test', im)
+    # return im.shape
+    return filename
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
