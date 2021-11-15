@@ -28,10 +28,19 @@ def crop():
     contours, img_rinkaku_mini = cv2.findContours(img_binary_mini, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
     # img_contour = cv2.drawContours(img_gray_color_mini, contours, -1, (0, 255, 0), 2)
     i = 0
-    for p in contours:
+    for point in contours:
+        padding = 50;
         img_gray_color_mini_work = copy.copy(img_gray_color_mini)
-        cv2.fillConvexPoly(img_gray_color_mini_work, points =p, color=(0, 255, 0))
-        cv2.imwrite("./resource/work/hoge"+str(i)+".jpg", img_gray_color_mini_work)
+        x, y, w, h = cv2.boundingRect(point)
+        crop_x = x - padding if (x - padding) > 0 else 0
+        crop_y = y - padding if (y - padding) > 0 else 0
+        crop_w = w + padding * 2 if (w + padding * 2) < w else w
+        crop_h = h + padding * 2 if (h + padding * 2) < h else h
+        cv2.rectangle(img_gray_color_mini_work, (x, y), (x + w, y + h), (0, 255, 0), -1)
+        # cv2.fillConvexPoly(img_gray_color_mini_work, points =p, color=(0, 255, 0))
+        crop_image = img_gray_color_mini[crop_x:crop_w, crop_y:crop_h]
+        cv2.imwrite("./resource/work/hoge"+str(i)+".jpg", crop_image)
+        # cv2.imshow("Cropped", crop_image)
         i += 1
     
     # 輪郭を１つずつ書き込んで出力
