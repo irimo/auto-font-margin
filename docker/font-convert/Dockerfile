@@ -16,23 +16,23 @@ RUN apt-get update && apt-get install -y zlib1g-dev libssl-dev libffi-dev build-
     libgdbm-dev libc6-dev libbz2-dev &&\
     rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/*
 
-RUN mkdir /workspace
-WORKDIR /workspace
+# RUN mkdir /workspace
+# WORKDIR /workspace
 
-# install python3
-RUN wget -c https://www.python.org/ftp/python/${python_version}/Python-${python_version}.tgz &&\
-    tar zxvf Python-${python_version}.tgz && cd Python-${python_version} &&\
-    ./configure --enable-optimizations --enable-shared CFLAGS=-fPIC &&\
-    make -j8 && make install && ldconfig && cd .. && rm Python-${python_version}.tgz &&\
-    rm -rf Python-${python_version}
-RUN pip3 install -U pip
-RUN pip3 install -U setuptools
+# # install python3
+# RUN wget -c https://www.python.org/ftp/python/${python_version}/Python-${python_version}.tgz &&\
+#     tar zxvf Python-${python_version}.tgz && cd Python-${python_version} &&\
+#     ./configure --enable-optimizations --enable-shared CFLAGS=-fPIC &&\
+#     make -j8 && make install && ldconfig && cd .. && rm Python-${python_version}.tgz &&\
+#     rm -rf Python-${python_version}
+# RUN pip3 install -U pip
+# RUN pip3 install -U setuptools
 
-WORKDIR /
-RUN rm -rf workspace/
+# WORKDIR /
+# RUN rm -rf workspace/
 
 
-RUN pip3 install flask
+# RUN pip3 install flask
 
 
 # Docker内で

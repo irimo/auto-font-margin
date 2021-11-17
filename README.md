@@ -10,5 +10,9 @@
 '''
 via https://hackmd.io/@T7k0V7TMQFelvJKKdo3pww/ryBaiO2uU
 docker build . -t web-app
-docker run -it -p 5000:5000 -v $(pwd)/:/home web-app python3 app.py
+docker run -it -p 5000:5000 -v $(pwd)/:/home web-app
+python3 app.py
 '''
+
+docker build . -t font-convert
+docker run -it -p 4999:4999 font-convert

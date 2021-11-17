@@ -1,3 +1,5 @@
+# これはまだ途中
+
 FROM nvidia/cuda:10.1-cudnn7-devel-ubuntu16.04
 
 ENV DEBIAN_FRONTEND=noninteractive
