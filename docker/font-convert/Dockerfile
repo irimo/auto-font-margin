@@ -4,35 +4,42 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 ARG python_version="3.7.3"
 
-# like tool
-RUN apt-get update && apt-get -y upgrade &&\
-    apt-get install -y --no-install-recommends \
-    vim unzip byobu wget tree git cmake\
-    && rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/*
 
-# install python3.7.3
-RUN apt-get update && apt-get install -y zlib1g-dev libssl-dev libffi-dev build-essential \
-    checkinstall libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev \
-    libgdbm-dev libc6-dev libbz2-dev &&\
-    rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/*
+RUN mkdir /workspace
+WORKDIR /workspace
 
-# RUN mkdir /workspace
-# WORKDIR /workspace
+RUN apt-get update
 
-# # install python3
-# RUN wget -c https://www.python.org/ftp/python/${python_version}/Python-${python_version}.tgz &&\
-#     tar zxvf Python-${python_version}.tgz && cd Python-${python_version} &&\
-#     ./configure --enable-optimizations --enable-shared CFLAGS=-fPIC &&\
-#     make -j8 && make install && ldconfig && cd .. && rm Python-${python_version}.tgz &&\
-#     rm -rf Python-${python_version}
-# RUN pip3 install -U pip
-# RUN pip3 install -U setuptools
+RUN apt-get install autoconf -y
+RUN apt-get install automake -y
+RUN apt-get install fontforge -y
 
-# WORKDIR /
-# RUN rm -rf workspace/
+WORKDIR /workspace
+RUN apt-get install wget -y
+RUN wget https://download.savannah.gnu.org/releases/freetype/freetype-2.10.1.tar.gz
+RUN tar xvfz freetype-2.10.1.tar.gz
+WORKDIR freetype-2.10.1
+RUN ./configure --prefix=/usr/local/freetype/2_10_1 --enable-freetype-config
+RUN make
+RUN make install
 
+RUN apt-get install imagemagick -y
 
-# RUN pip3 install flask
+WORKDIR /workspace
+RUN apt-get install git -y
+RUN git clone https://github.com/fontforge/libspiro
+WORKDIR libspiro
+RUN apt-get  install libtool -y
+RUN autoreconf --install --force
+RUN automake --foreign -Wall
+
+RUN apt-get install m4 -y
+RUN apt-get install potrace -y
+
+RUN apt-get install python3 -y
+
+WORKDIR /
+RUN rm -rf workspace/
 
 
 # Docker内で
