@@ -7,7 +7,7 @@ require_once(DIRNAME(__FILE__)."/imageconvert.class.php");
 
 class MakeFont{
   public static function make($filename, $fontname_e, $fontname_j, $authorname){
-    $tmp_dir = $this->getTmpDir();
+    $tmp_dir = self::getTmpDir();
     $obj = new ImageConvert($tmp_dir);
     if(!isset($_FILES))die("画像ファイルが読み込めません。");
     foreach($_FILES as $key => $value){
@@ -17,7 +17,7 @@ class MakeFont{
     $cmd = "fontforge ./fontmaker.pe \"{$filename}\" \"{$fontname_e}\" \"{$fontname_j}\" \"{$authorname}\" \"{$tmp_dir}\"";
     exec($cmd);
 
-    $filepath = "/home/moemoe/maked_fonts/".$tmp_dir."-".$filename.".ttf";
+    $filepath = "./maked_fonts/fonts/".$tmp_dir."/".$filename.".ttf";
     return $filepath;
   }
   function getTmpDir(){

@@ -28,7 +28,7 @@ class ImageConvert {
   public function makeSVG($code,$file_obj){
     if($this->setBMP($file_obj) === false) return false;
     exec("mkdir {$this->processDir}{$this->dir}");
-    exec("mkdir  ./maked_fonts/{$this->dir}");
+    exec("mkdir  ./maked_fonts/fonts/{$this->dir}");  // fontmaker.pe で使う
     
     $cmd_pgm = "convert {$this->bmpPath} {$this->processDir}{$this->dir}/{$code}.pgm";
     $cmd_svg = "potrace -s -a 1 -k 0.9 {$this->processDir}{$this->dir}/{$code}.pgm -W10cm -H 10cm";
