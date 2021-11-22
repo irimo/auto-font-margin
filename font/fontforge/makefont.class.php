@@ -6,11 +6,11 @@
 require_once(DIRNAME(__FILE__)."/imageconvert.class.php");
 
 class MakeFont{
-  public static function make($filename, $fontname_e, $fontname_j, $authorname){
+  public static function make($filename, $fontname_e, $fontname_j, $authorname, $files){
     $tmp_dir = self::getTmpDir();
     $obj = new ImageConvert($tmp_dir);
-    if(!isset($_FILES))die("画像ファイルが読み込めません。");
-    foreach($_FILES as $key => $value){
+    foreach($files as $key => $value){
+      if(!isset($value))die("画像ファイルが読み込めません。");
       $obj->makeSVG($key, $value);
     }
 
