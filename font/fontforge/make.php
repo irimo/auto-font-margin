@@ -2,17 +2,16 @@
 require_once("./makefont.class.php");
 $filename = "test";
 $fontname_e = "test font";
-$fontname_j = "FONT";
+// $fontname_j = "フォント"; // まあ、日本語ファイル名はグローバル的にな（？）ちゃんとしたソフトで入れてくれ～
 $authorname = "UNKNOWN";
 
 $files = array();
 
-// $n = hexdec("21");
-// $n_max = hexdec("7e");
-// for($i=$n; $i<=$n_max; $i++) {
-//     $files["u00".dechex($n)] = "./maked_fonts/raw/A.jpg";
-// }
-$files["u0021"] = "./maked_fonts/raw/A.jpg";
+$n = hexdec("21");
+$n_max = hexdec("7e");
+for($i=$n; $i<=$n_max; $i++) {
+    $files["u00".dechex($i)] = "./maked_fonts/raw/A.jpg";
+}
 /*
 // A-Z u0041-u005a
 $n = 41;
@@ -64,7 +63,7 @@ $files["u002c"] = "./maked_fonts/raw/colon.jpg";
 $files["u002e"] = "./maked_fonts/raw/dot.jpg";
 */
 
-$filepath = MakeFont::make($filename, $fontname_e, $fontname_j, $authorname, $files);
+$filepath = MakeFont::make($filename, $fontname_e, $authorname, $files);
 if(file_exists($filepath) === true){
     echo $filepath;
     echo "<br>フォントが作成されました。";

@@ -60,6 +60,7 @@ RUN apt-get install python3 -y
 # このへん作業用
 RUN apt-get install vim -y
 RUN apt-get install lsof -y
+RUN apt-get install bash -y
 
 WORKDIR /
 RUN rm -rf workspace/
