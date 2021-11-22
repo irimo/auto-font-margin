@@ -13,7 +13,7 @@ class ImageConvert {
   function setBMP($file){
     if(file_exists($file) && filesize($file)){
       exec("mkdir {$this->bmpDir}{$this->dir}");
-      $this->bmpPath = "{$this->bmpDir}{$this->dir}/{basename($file)}";
+      $this->bmpPath = "{$this->bmpDir}{$this->dir}/".basename($file);
       if(!file_exists($this->bmpPath) || filesize($this->bmpPath) === 0){
         $cmd = "cp {$file} {$this->bmpPath}";
         exec($cmd);
