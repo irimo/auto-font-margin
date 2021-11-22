@@ -8,14 +8,16 @@ class ImageConvert {
     $this->dir = $dir;
     $this->bmpDir = "./maked_fonts/bmps/";
     $this->processDir = "./maked_fonts/processimgs/";
+    exec("mkdir {$this->bmpDir}{$this->dir}");
+    exec("mkdir {$this->processDir}{$this->dir}");
+    exec("mkdir  ./maked_fonts/fonts/{$this->dir}");  // fontmaker.pe で使う
   }
 /* private */
-  function setBMP($file_obj){
-    if(file_exists($file_obj["tmp_name"]) && filesize($file_obj["tmp_name"])){
-      exec("mkdir {$this->bmpDir}{$this->dir}");
-      $this->bmpPath = "{$this->bmpDir}{$this->dir}/{$file_obj["name"]}";
+  function setBMP($file){
+    if(file_exists($file) && filesize($file)){
+      $this->bmpPath = "{$this->bmpDir}{$this->dir}/".basename($file);
       if(!file_exists($this->bmpPath) || filesize($this->bmpPath) === 0){
-        $cmd = "cp {$file_obj["tmp_name"]} {$this->bmpPath}";
+        $cmd = "cp {$file} {$this->bmpPath}";
         exec($cmd);
       }
       return true;
@@ -25,10 +27,8 @@ class ImageConvert {
   }
   
 
-  public function makeSVG($code,$file_obj){
-    if($this->setBMP($file_obj) === false) return false;
-    exec("mkdir {$this->processDir}{$this->dir}");
-    exec("mkdir  ./maked_fonts/{$this->dir}");
+  public function makeSVG($code, $file){
+    if($this->setBMP($file) === false) return false;
     
     $cmd_pgm = "convert {$this->bmpPath} {$this->processDir}{$this->dir}/{$code}.pgm";
     $cmd_svg = "potrace -s -a 1 -k 0.9 {$this->processDir}{$this->dir}/{$code}.pgm -W10cm -H 10cm";

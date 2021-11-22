@@ -1,7 +1,10 @@
 #!/usr/local/bin/fontforge -script
 
-_fontname = "/home/moemoe/maked_fonts/"+$5+"/"+$1+".ttf"
-_importfile = "/home/moemoe/maked_fonts/"+$5+"/u*.svg"
+# $cmd = "/usr/local/bin/fontforge /home/moemoe/programs/maker/python/fontmaker.pe \"{$filename}\" \"{$fontname_e}\" \"{$fontname_j}\" \"{$authorname}\" \"{$tmp_dir}\"";
+# $filepath = "/home/moemoe/maked_fonts/".$tmp_dir."-".$filename.".ttf";
+
+_fontname = "./maked_fonts/fonts/"+$4+"/"+$1+".ttf"
+_importfile = "./maked_fonts/processimgs/"+$4+"/u*.svg"
 
 New()
 
@@ -60,10 +63,11 @@ SetFontNames($1,\
              $2,\
              $2,\
              "Medium",\
-             $4+" @http://iridigarden.com",\
+             $3,\
              "1.00") 
-SetTTFName(0x411, 1, $3)
-SetTTFName(0x411, 4, $3)
+SetTTFName(0x411, 1, $2)
+SetTTFName(0x411, 4, $2)
+SetTTFName(0x411, 6, $2)
 
 # SFD
 #Save(_fontname:t:r + ".sfd")

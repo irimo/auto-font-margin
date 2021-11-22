@@ -7,22 +7,22 @@
 <div id="cont_include">
 	<form enctype="multipart/form-data" method="POST" action="./fontforge/make.php">
 <hr />
-    <h3>STEP2:画像を用意</h3>
-    次に、ペイントソフトなどで、一文字ずつ画像を用意しましょう。<br />
-    自分のコンピューターに保存します。<br />
-    Illustratorで書いたものも、jpg,gif,pngに変換してください。<br />
-    モノクロ推奨(<a href="http://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%B3%E3%83%81%E3%82%A8%E3%82%A4%E3%83%AA%E3%82%A2%E3%82%B9">アンチエイリアス</a>はOK)。<br />
-    ※ファイル名は、全部違うものにしてください。<br />
+    <h3>STEP1prepare images</h3>
+    <ul>
+      <li>jpg,gif,png</li>
+      <li>monochro (<a href="http://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%B3%E3%83%81%E3%82%A8%E3%82%A4%E3%83%AA%E3%82%A2%E3%82%B9">antialias</a> OK)</li>
+      <li>other filename for several glyphs.</li>
+    </ul>
 <hr />
 
-    <h3>STEP3:フォントデータ指定</h3>
-   下のフォームに画像を指定しましょう。『選択』をクリックして、画像を指定してください。プレビューが表示されます。<br />
-※ 指定しないと、その文字は空白になります。<br />
-※『選択』ボタンにドラック&ドロップしても指定されます。
+    <h3>STEP2:set font data on this form</h3>
+    <ul>
+      <li>if not set, this font is going to blank glyph</li>
+    </ul>
 <div>
-<h4 class="di-letter_caption">Alphabet (大文字)
- <input type="button" value="作る"  class="di-make-true" id="btn-alphabet_up_true"/>
-  <input type="button" value="作らない" class="di-make-false" id="btn-alphabet_up_false" />
+<h4 class="di-letter_caption">Alphabet (Upper case)
+ <input type="button" value="make"  class="di-make-true" id="btn-alphabet_up_true"/>
+  <input type="button" value="not make" class="di-make-false" id="btn-alphabet_up_false" />
 </h4>
 
 <div id="list-alphabet_up" class="di-letters-list">
@@ -795,11 +795,8 @@
 
 <hr />
 
-<h3>STEP4:フォントファイル作成</h3>
-漏れ・間違いはありませんか？<br />
-OKだったら、いよいよ仕上げです！<br />
-<br />
-<input type="submit" value="フォントを作成する！">
+<h3>STEP3</h3>
+<input type="submit" value="make font!!!">
 </form>
 </div>
 </body>

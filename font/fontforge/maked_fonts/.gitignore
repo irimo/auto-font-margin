@@ -1,0 +1,8 @@
+./backup/*
+!./backup/.gitkeep
+./bmps/*
+!./bmps/.gitkeep
+./fonts/*
+!./fonts/.gitkeep
+./processimgs/*
+!./processimgs/.gitkeep
