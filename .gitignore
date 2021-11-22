@@ -1,1 +1,9 @@
 .DS_Store
+font/fontforge/maked_fonts/backup/*
+!font/fontforge/maked_fonts/backup/.gitkeep
+font/fontforge/maked_fonts/bmps/*
+!font/fontforge/maked_fonts/bmps/.gitkeep
+font/fontforge/maked_fonts/fonts/*
+!font/fontforge/maked_fonts/fonts/.gitkeep
+font/fontforge/maked_fonts/processimgs/*
+!font/fontforge/maked_fonts/processimgs/.gitkeep
