@@ -6,19 +6,60 @@ FROM php:7.0-apache
 
 
 RUN mkdir /workspace
-WORKDIR /workspace
+# WORKDIR /workspace
 
 RUN apt-get update
-RUN apt-get install -y wget git unzip libpq-dev libfreetype6-dev libjpeg62-turbo-dev libpng-dev
-RUN docker-php-ext-install -j$(nproc) pdo_pgsql
-RUN docker-php-ext-configure gd --with-freetype --with-jpeg
-RUN docker-php-ext-install -j$(nproc) gd
+# RUN apt-get install -y wget git unzip libpq-dev libfreetype6-dev libjpeg62-turbo-dev libpng-dev
+# RUN docker-php-ext-install -j$(nproc) pdo_pgsql
+# RUN docker-php-ext-configure gd --with-freetype --with-jpeg
+# RUN docker-php-ext-install -j$(nproc) gd
 # RUN apt install -y ca-certificates
 # RUN apt-get install autoconf -y
 # RUN apt-get install automake -y
 # RUN apt-get install fontforge -y
 
+# WORKDIR /workspace
+
+# FROM php:8.0.9-fpm-alpine
+
 WORKDIR /workspace
+RUN apt-get install wget -y
+# RUN wget https://download.savannah.gnu.org/releases/freetype/freetype-2.10.1.tar.gz
+COPY ./copy_files/src/freetype-2.10.1.tar.gz ./
+RUN tar xvfz freetype-2.10.1.tar.gz
+WORKDIR freetype-2.10.1
+RUN ./configure --prefix=/usr/local/freetype/2_10_1 --enable-freetype-config
+RUN make
+RUN make install
+
+WORKDIR /workspace
+RUN apt-get install zlib1g-dev
+RUN apt-get install -y git
+RUN git clone https://github.com/glennrp/libpng.git
+WORKDIR libpng
+RUN ./configure && make && make install
+# COPY ./copy_files/src/lpng1637.zip ./
+# RUN unzip lpng1637.zip
+
+
+# RUN apt-get install -y libpng
+
+# RUN apt-get install -y libjpeg-turbo
+# RUN apt-get install -y freetype-dev
+# RUN apt-get install -y libpng-dev
+# RUN apt-get install -y libjpeg-turbo-dev
+# RUN docker-php-ext-configure gd -with-jpeg=/usr/include/ --with-freetype=/usr/include/
+# RUN NPROC=$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1)
+# RUN docker-php-ext-install -j${NPROC} gd pdo_mysql
+# RUN apt remove freetype-dev libpng-dev libjpeg-turbo-dev
+
+# COPY --from=composer:2.1 /usr/bin/composer /usr/bin/composer
+
+# RUN { \
+#   echo 'access.format = "%R - %u %t \"%m %{REQUEST_URI}e\" %s"'; \
+# } >> /usr/local/etc/php-fpm.d/www.conf
+
+# WORKDIR /var/www/work
 # RUN apt-get install wget -y
 # # RUN wget https://download.savannah.gnu.org/releases/freetype/freetype-2.10.1.tar.gz
 # COPY ./copy_files/src/freetype-2.10.1.tar.gz ./
@@ -41,7 +82,7 @@ RUN apt-get install imagemagick -y
 # RUN apt-get install m4 -y
 # RUN apt-get install potrace -y
 
-RUN apt-get install python3 -y
+# RUN apt-get install python3 -y
 
 # RUN apt-get install nginx -y
 # RUN nginx
@@ -66,7 +107,7 @@ RUN apt-get install lsof -y
 RUN apt-get install bash -y
 
 WORKDIR /
-RUN rm -rf workspace/
+# RUN rm -rf workspace/
 
 # COPY ./copy_files/php_setting.conf /etc/nginx/conf.d/
 
