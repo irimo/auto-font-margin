@@ -1,62 +1,77 @@
-# 一応コピペしたけどどうしようかな
+# FROM nvidia/cuda:10.1-cudnn7-devel-ubuntu16.04
+FROM php:7.0-apache
+# ENV DEBIAN_FRONTEND=noninteractive
 
-FROM nvidia/cuda:10.1-cudnn7-devel-ubuntu16.04
+# ARG python_version="3.7.3"
 
-ENV DEBIAN_FRONTEND=noninteractive
-
-ARG python_version="3.7.3"
-ARG version="4.2.0"
-
-# like tool
-RUN apt-get update && apt-get -y upgrade &&\
-    apt-get install -y --no-install-recommends \
-    vim unzip byobu wget tree git cmake\
-    && rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/*
-
-# install python3.7.3
-RUN apt-get update && apt-get install -y zlib1g-dev libssl-dev libffi-dev build-essential \
-    checkinstall libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev \
-    libgdbm-dev libc6-dev libbz2-dev &&\
-    rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/*
 
 RUN mkdir /workspace
 WORKDIR /workspace
 
-# install python3
-RUN wget -c https://www.python.org/ftp/python/${python_version}/Python-${python_version}.tgz &&\
-    tar zxvf Python-${python_version}.tgz && cd Python-${python_version} &&\
-    ./configure --enable-optimizations --enable-shared CFLAGS=-fPIC &&\
-    make -j8 && make install && ldconfig && cd .. && rm Python-${python_version}.tgz &&\
-    rm -rf Python-${python_version}
-RUN pip3 install -U pip
-RUN pip3 install -U setuptools
+RUN apt-get update
+RUN apt-get install -y wget git unzip libpq-dev libfreetype6-dev libjpeg62-turbo-dev libpng-dev
+RUN docker-php-ext-install -j$(nproc) pdo_pgsql
+RUN docker-php-ext-configure gd --with-freetype --with-jpeg
+RUN docker-php-ext-install -j$(nproc) gd
+# RUN apt install -y ca-certificates
+# RUN apt-get install autoconf -y
+# RUN apt-get install automake -y
+# RUN apt-get install fontforge -y
 
-# install opencv
-RUN pip3 install -U numpy
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    gcc g++ libpng-dev libjpeg-dev libopenexr-dev libtiff-dev libwebp-dev \
-    libgtk-3-dev &&\
-    rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/*
+WORKDIR /workspace
+# RUN apt-get install wget -y
+# # RUN wget https://download.savannah.gnu.org/releases/freetype/freetype-2.10.1.tar.gz
+# COPY ./copy_files/src/freetype-2.10.1.tar.gz ./
+# RUN tar xvfz freetype-2.10.1.tar.gz
+# WORKDIR freetype-2.10.1
+# RUN ./configure --prefix=/usr/local/freetype/2_10_1 --enable-freetype-config
+# RUN make
+# RUN make install
 
-RUN wget -c https://github.com/opencv/opencv/archive/${version}.tar.gz &&\
-    tar -zxvf ${version}.tar.gz && rm ${version}.tar.gz
-RUN mkdir /workspace/opencv-${version}/build
+RUN apt-get install imagemagick -y
 
-## opencv_contrib
-RUN wget -c https://github.com/opencv/opencv_contrib/archive/${version}.tar.gz &&\
-    tar -zxvf ${version}.tar.gz && rm /workspace/${version}.tar.gz
-WORKDIR /workspace/opencv-${version}/build
+# WORKDIR /workspace
+# RUN apt-get install git -y
+# RUN git clone https://github.com/fontforge/libspiro
+# WORKDIR libspiro
+# RUN apt-get  install libtool -y
+# RUN autoreconf --install --force
+# RUN automake --foreign -Wall
 
-## make opencv
-RUN cmake -OPENCV_EXTRA_MODULES_PATH=/workspace/opencv_contrib-${version}/modules ..
-RUN make -j8 && make install && ldconfig
+# RUN apt-get install m4 -y
+# RUN apt-get install potrace -y
+
+RUN apt-get install python3 -y
+
+# RUN apt-get install nginx -y
+# RUN nginx
+
+# WORKDIR /workspace
+# RUN wget -O init-deb.sh https://www.linode.com/docs/assets/660-init-deb.sh
+# RUN mv init-deb.sh /etc/init.d/nginx
+# RUN chmod +x /etc/init.d/nginx
+# RUN /usr/sbin/update-rc.d -f nginx defaults
+# RUN apt-get install php -y
+
+# RUN apt-get install apache2 -y
+# RUN apt-get install php -y
+# RUN apt-get install php-fpm -y
+
+# python apache
+# RUN pacman -S mod_wsgi
+
+# このへん作業用
+RUN apt-get install vim -y
+RUN apt-get install lsof -y
+RUN apt-get install bash -y
 
 WORKDIR /
 RUN rm -rf workspace/
 
-
-RUN pip3 install flask
-
+# COPY ./copy_files/php_setting.conf /etc/nginx/conf.d/
 
 # Docker内で
-WORKDIR /home
+# RUN service nginx start
+# RUN systemctl enable apache2
+# EXPOSE 80
+WORKDIR /var/www/html

@@ -8,10 +8,12 @@ $authorname = "UNKNOWN";
 $files = array();
 
 $n = hexdec("21");
-$n_max = hexdec("7e");
-for($i=$n; $i<=$n_max; $i++) {
-    $files["u00".dechex($i)] = "./maked_fonts/raw/A.jpg";
-}
+// $n_max = hexdec("7e");
+$files["u0021"] = "./maked_fonts/raw/exclamation.jpg";
+
+// for($i=$n; $i<=$n_max; $i++) {
+//     $files["u00".dechex($i)] = "./maked_fonts/raw/A.jpg";
+// }
 /*
 // A-Z u0041-u005a
 $n = 41;
