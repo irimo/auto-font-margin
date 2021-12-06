@@ -38,18 +38,20 @@ RUN apt-get install -y git
 RUN git clone https://github.com/glennrp/libpng.git
 WORKDIR libpng
 RUN ./configure && make && make install
-# COPY ./copy_files/src/lpng1637.zip ./
-# RUN unzip lpng1637.zip
 
+WORKDIR /workspace
+RUN apt-get install -y cmake
+RUN git clone https://github.com/libjpeg-turbo/libjpeg-turbo.git
+WORKDIR libjpeg-turbo
+RUN mkdir build
+WORKDIR build
+RUN cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local/libjpeg_turbo/2_0_2 -DCMAKE_BUILD_TYPE=RELEASE
+RUN make
+RUN make install
 
-# RUN apt-get install -y libpng
-
-# RUN apt-get install -y libjpeg-turbo
-# RUN apt-get install -y freetype-dev
-# RUN apt-get install -y libpng-dev
 # RUN apt-get install -y libjpeg-turbo-dev
-# RUN docker-php-ext-configure gd -with-jpeg=/usr/include/ --with-freetype=/usr/include/
-# RUN NPROC=$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1)
+RUN docker-php-ext-configure gd -with-jpeg=/usr/include/ --with-freetype=/usr/include/
+RUN NPROC=$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1)
 # RUN docker-php-ext-install -j${NPROC} gd pdo_mysql
 # RUN apt remove freetype-dev libpng-dev libjpeg-turbo-dev
 
@@ -58,16 +60,6 @@ RUN ./configure && make && make install
 # RUN { \
 #   echo 'access.format = "%R - %u %t \"%m %{REQUEST_URI}e\" %s"'; \
 # } >> /usr/local/etc/php-fpm.d/www.conf
-
-# WORKDIR /var/www/work
-# RUN apt-get install wget -y
-# # RUN wget https://download.savannah.gnu.org/releases/freetype/freetype-2.10.1.tar.gz
-# COPY ./copy_files/src/freetype-2.10.1.tar.gz ./
-# RUN tar xvfz freetype-2.10.1.tar.gz
-# WORKDIR freetype-2.10.1
-# RUN ./configure --prefix=/usr/local/freetype/2_10_1 --enable-freetype-config
-# RUN make
-# RUN make install
 
 RUN apt-get install imagemagick -y
 
