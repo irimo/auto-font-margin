@@ -1,110 +1,142 @@
 # FROM nvidia/cuda:10.1-cudnn7-devel-ubuntu16.04
-FROM php:7.0-apache
-# ENV DEBIAN_FRONTEND=noninteractive
+# FROM php:7.0-apache
+# # ENV DEBIAN_FRONTEND=noninteractive
 
-# ARG python_version="3.7.3"
+# # ARG python_version="3.7.3"
 
 
-RUN mkdir /workspace
-# WORKDIR /workspace
+# RUN mkdir /workspace
+# # WORKDIR /workspace
 
-RUN apt-get update
-# RUN apt-get install -y wget git unzip libpq-dev libfreetype6-dev libjpeg62-turbo-dev libpng-dev
-# RUN docker-php-ext-install -j$(nproc) pdo_pgsql
-# RUN docker-php-ext-configure gd --with-freetype --with-jpeg
-# RUN docker-php-ext-install -j$(nproc) gd
-# RUN apt install -y ca-certificates
-# RUN apt-get install autoconf -y
-# RUN apt-get install automake -y
-# RUN apt-get install fontforge -y
+# RUN apt-get update
+# # RUN apt-get install -y wget git unzip libpq-dev libfreetype6-dev libjpeg62-turbo-dev libpng-dev
+# # RUN docker-php-ext-install -j$(nproc) pdo_pgsql
+# # RUN docker-php-ext-configure gd --with-freetype --with-jpeg
+# # RUN docker-php-ext-install -j$(nproc) gd
+# # RUN apt install -y ca-certificates
+# # RUN apt-get install autoconf -y
+# # RUN apt-get install automake -y
+# # RUN apt-get install fontforge -y
 
-# WORKDIR /workspace
+# # WORKDIR /workspace
 
-# FROM php:8.0.9-fpm-alpine
-
-WORKDIR /workspace
-RUN apt-get install wget -y
-# RUN wget https://download.savannah.gnu.org/releases/freetype/freetype-2.10.1.tar.gz
-COPY ./copy_files/src/freetype-2.10.1.tar.gz ./
-RUN tar xvfz freetype-2.10.1.tar.gz
-WORKDIR freetype-2.10.1
-RUN ./configure --prefix=/usr/local/freetype/2_10_1 --enable-freetype-config
-RUN make
-RUN make install
-
-WORKDIR /workspace
-RUN apt-get install zlib1g-dev
-RUN apt-get install -y git
-RUN git clone https://github.com/glennrp/libpng.git
-WORKDIR libpng
-RUN ./configure && make && make install
-
-WORKDIR /workspace
-RUN apt-get install -y cmake
-RUN git clone https://github.com/libjpeg-turbo/libjpeg-turbo.git
-WORKDIR libjpeg-turbo
-RUN mkdir build
-WORKDIR build
-RUN cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local/libjpeg_turbo/2_0_2 -DCMAKE_BUILD_TYPE=RELEASE
-RUN make
-RUN make install
-
-# RUN apt-get install -y libjpeg-turbo-dev
-RUN docker-php-ext-configure gd -with-jpeg=/usr/include/ --with-freetype=/usr/include/
-RUN NPROC=$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1)
-# RUN docker-php-ext-install -j${NPROC} gd pdo_mysql
-# RUN apt remove freetype-dev libpng-dev libjpeg-turbo-dev
-
-# COPY --from=composer:2.1 /usr/bin/composer /usr/bin/composer
-
-# RUN { \
-#   echo 'access.format = "%R - %u %t \"%m %{REQUEST_URI}e\" %s"'; \
-# } >> /usr/local/etc/php-fpm.d/www.conf
-
-RUN apt-get install imagemagick -y
+# # FROM php:8.0.9-fpm-alpine
 
 # WORKDIR /workspace
-# RUN apt-get install git -y
-# RUN git clone https://github.com/fontforge/libspiro
-# WORKDIR libspiro
-# RUN apt-get  install libtool -y
-# RUN autoreconf --install --force
-# RUN automake --foreign -Wall
-
-# RUN apt-get install m4 -y
-# RUN apt-get install potrace -y
-
-# RUN apt-get install python3 -y
-
-# RUN apt-get install nginx -y
-# RUN nginx
+# RUN apt-get install wget -y
+# # RUN wget https://download.savannah.gnu.org/releases/freetype/freetype-2.10.1.tar.gz
+# COPY ./copy_files/src/freetype-2.10.1.tar.gz ./
+# RUN tar xvfz freetype-2.10.1.tar.gz
+# WORKDIR freetype-2.10.1
+# RUN ./configure --prefix=/usr/local/freetype/2_10_1 --enable-freetype-config
+# RUN make
+# RUN make install
 
 # WORKDIR /workspace
-# RUN wget -O init-deb.sh https://www.linode.com/docs/assets/660-init-deb.sh
-# RUN mv init-deb.sh /etc/init.d/nginx
-# RUN chmod +x /etc/init.d/nginx
-# RUN /usr/sbin/update-rc.d -f nginx defaults
-# RUN apt-get install php -y
+# RUN apt-get install zlib1g-dev
+# RUN apt-get install -y git
+# RUN git clone https://github.com/glennrp/libpng.git
+# WORKDIR libpng
+# RUN ./configure && make && make install
 
-# RUN apt-get install apache2 -y
-# RUN apt-get install php -y
-# RUN apt-get install php-fpm -y
+# WORKDIR /workspace
+# RUN apt-get install -y cmake
+# RUN git clone https://github.com/libjpeg-turbo/libjpeg-turbo.git
+# WORKDIR libjpeg-turbo
+# RUN mkdir build
+# WORKDIR build
+# RUN cmake .. -DCMAKE_INSTALL_PREFIX=/usr/local/libjpeg_turbo/2_0_2 -DCMAKE_BUILD_TYPE=RELEASE
+# RUN make
+# RUN make install
 
-# python apache
-# RUN pacman -S mod_wsgi
+# # RUN apt-get install -y libjpeg-turbo-dev
+# RUN docker-php-ext-configure gd -with-jpeg=/usr/include/ --with-freetype=/usr/include/
+# RUN NPROC=$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1)
+# # RUN docker-php-ext-install -j${NPROC} gd pdo_mysql
+# # RUN apt remove freetype-dev libpng-dev libjpeg-turbo-dev
 
-# このへん作業用
-RUN apt-get install vim -y
-RUN apt-get install lsof -y
-RUN apt-get install bash -y
+# # COPY --from=composer:2.1 /usr/bin/composer /usr/bin/composer
 
-WORKDIR /
-# RUN rm -rf workspace/
+# # RUN { \
+# #   echo 'access.format = "%R - %u %t \"%m %{REQUEST_URI}e\" %s"'; \
+# # } >> /usr/local/etc/php-fpm.d/www.conf
 
-# COPY ./copy_files/php_setting.conf /etc/nginx/conf.d/
+# RUN apt-get install imagemagick -y
 
-# Docker内で
-# RUN service nginx start
-# RUN systemctl enable apache2
-# EXPOSE 80
+# # WORKDIR /workspace
+# # RUN apt-get install git -y
+# # RUN git clone https://github.com/fontforge/libspiro
+# # WORKDIR libspiro
+# # RUN apt-get  install libtool -y
+# # RUN autoreconf --install --force
+# # RUN automake --foreign -Wall
+
+# # RUN apt-get install m4 -y
+# # RUN apt-get install potrace -y
+
+# # RUN apt-get install python3 -y
+
+# # RUN apt-get install nginx -y
+# # RUN nginx
+
+# # WORKDIR /workspace
+# # RUN wget -O init-deb.sh https://www.linode.com/docs/assets/660-init-deb.sh
+# # RUN mv init-deb.sh /etc/init.d/nginx
+# # RUN chmod +x /etc/init.d/nginx
+# # RUN /usr/sbin/update-rc.d -f nginx defaults
+# # RUN apt-get install php -y
+
+# # RUN apt-get install apache2 -y
+# # RUN apt-get install php -y
+# # RUN apt-get install php-fpm -y
+
+# # python apache
+# # RUN pacman -S mod_wsgi
+
+# # このへん作業用
+# RUN apt-get install vim -y
+# RUN apt-get install lsof -y
+# RUN apt-get install bash -y
+
+# WORKDIR /
+# # RUN rm -rf workspace/
+
+# # COPY ./copy_files/php_setting.conf /etc/nginx/conf.d/
+
+# # Docker内で
+# # RUN service nginx start
+# # RUN systemctl enable apache2
+# # EXPOSE 80
+# WORKDIR /var/www/html
+
+FROM php:7.2-fpm
+
+# Replace shell with bash so we can source files
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+
+# make sure apt is up to date
+RUN apt-get update --fix-missing
+RUN apt-get install -y curl
+RUN apt-get install -y build-essential libssl-dev zlib1g-dev libpng-dev libjpeg-dev libfreetype6-dev
+
+ENV NVM_DIR /usr/local/nvm
+ENV NODE_VERSION 9.2.0
+
+# Install nvm with node and npm
+RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash \
+    && source $NVM_DIR/nvm.sh \
+    && nvm install $NODE_VERSION \
+    && nvm alias default $NODE_VERSION \
+    && nvm use default
+
+ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
+ENV PATH      $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
+
 WORKDIR /var/www/html
+
+RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
+    && docker-php-ext-install gd
+
+RUN docker-php-ext-install pdo pdo_mysql mysqli
+
+RUN usermod -u 1000 www-data
