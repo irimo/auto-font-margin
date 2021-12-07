@@ -29,6 +29,7 @@ RUN wget -c https://www.python.org/ftp/python/${python_version}/Python-${python_
 RUN pip3 install -U pip
 RUN pip3 install -U setuptools
 
+RUN pip3 install -U ttfquery
 
 
 
