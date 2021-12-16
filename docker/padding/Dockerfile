@@ -29,7 +29,29 @@ RUN wget -c https://www.python.org/ftp/python/${python_version}/Python-${python_
 RUN pip3 install -U pip
 RUN pip3 install -U setuptools
 
-RUN pip3 install -U ttfquery
+# RUN pip3 install -U ttfquery
+RUN pip3 install -U font2img
+
+
+# install opencv
+RUN pip3 install -U numpy
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gcc g++ libpng-dev libjpeg-dev libopenexr-dev libtiff-dev libwebp-dev \
+    libgtk-3-dev &&\
+    rm -rf /var/lib/apt/lists/* /var/cache/apt/archives/*
+
+RUN wget -c https://github.com/opencv/opencv/archive/${version}.tar.gz &&\
+    tar -zxvf ${version}.tar.gz && rm ${version}.tar.gz
+RUN mkdir /workspace/opencv-${version}/build
+
+## opencv_contrib
+RUN wget -c https://github.com/opencv/opencv_contrib/archive/${version}.tar.gz &&\
+    tar -zxvf ${version}.tar.gz && rm /workspace/${version}.tar.gz
+WORKDIR /workspace/opencv-${version}/build
+
+## make opencv
+RUN cmake -OPENCV_EXTRA_MODULES_PATH=/workspace/opencv_contrib-${version}/modules ..
+RUN make -j8 && make install && ldconfig
 
 
 
