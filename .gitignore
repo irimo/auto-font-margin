@@ -9,3 +9,4 @@ font/fontforge/maked_fonts/processimgs/*
 !font/fontforge/maked_fonts/processimgs/.gitkeep
 padding/node_modules
 padding/ufo2svg
+padding/dist/ufos
