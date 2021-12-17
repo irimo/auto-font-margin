@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni1F42" format="2">
+  <advance width="500"/>
+  <unicode hex="1F42"/>
+  <outline>
+    <contour>
+      <point x="50" y="530"/>
+      <point x="450" y="530"/>
+      <point x="450" y="-10"/>
+      <point x="50" y="-10"/>
+    </contour>
+    <contour>
+      <point x="365" y="760" type="line"/>
+      <point x="470" y="590" type="line"/>
+      <point x="390" y="590" type="line"/>
+      <point x="245" y="760" type="line"/>
+    </contour>
+    <contour>
+      <point x="60" y="775" type="line"/>
+      <point x="146" y="774"/>
+      <point x="234" y="730"/>
+      <point x="235" y="695" type="qcurve"/>
+      <point x="235" y="643"/>
+      <point x="180" y="590" type="qcurve"/>
+      <point x="100" y="590" type="line"/>
+      <point x="150" y="636"/>
+      <point x="150" y="665" type="qcurve"/>
+      <point x="150" y="680"/>
+      <point x="104" y="700"/>
+      <point x="60" y="700" type="qcurve"/>
+    </contour>
+    <contour>
+      <point x="250" y="59" type="qcurve"/>
+      <point x="311" y="59"/>
+      <point x="339" y="104" type="qcurve"/>
+      <point x="368" y="149"/>
+      <point x="368" y="260" type="qcurve"/>
+      <point x="368" y="370"/>
+      <point x="339" y="416" type="qcurve"/>
+      <point x="310" y="461"/>
+      <point x="250" y="461" type="qcurve"/>
+      <point x="189" y="461"/>
+      <point x="161" y="416" type="qcurve"/>
+      <point x="132" y="371"/>
+      <point x="132" y="260" type="qcurve"/>
+      <point x="132" y="150"/>
+      <point x="161" y="104" type="qcurve"/>
+      <point x="190" y="59"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>8e92feb094e5eaa97c477faed0dd85ac68d18ff617a70427e7bd7622815e23ebee87c5770571ee7d9077f9d1c55d7f1f81ff8bb564baae1f7ce613aa12142f9a</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

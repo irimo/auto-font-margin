@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="musicalnote" format="2">
+  <advance width="1000"/>
+  <unicode hex="266A"/>
+  <outline>
+    <contour>
+      <point x="464" y="800" type="line"/>
+      <point x="540" y="709"/>
+      <point x="672" y="616"/>
+      <point x="803" y="504"/>
+      <point x="803" y="429" type="qcurve"/>
+      <point x="803" y="376"/>
+      <point x="706" y="276"/>
+      <point x="634" y="227" type="qcurve"/>
+      <point x="616" y="224"/>
+      <point x="624" y="240" type="qcurve"/>
+      <point x="678" y="291"/>
+      <point x="719" y="369"/>
+      <point x="719" y="397" type="qcurve"/>
+      <point x="719" y="427"/>
+      <point x="645" y="502"/>
+      <point x="535" y="577"/>
+      <point x="491" y="617" type="qcurve"/>
+      <point x="491" y="144" type="line"/>
+      <point x="491" y="78"/>
+      <point x="443" y="3"/>
+      <point x="359" y="-48"/>
+      <point x="312" y="-49" type="qcurve"/>
+      <point x="263" y="-49"/>
+      <point x="197" y="-6"/>
+      <point x="197" y="32" type="qcurve"/>
+      <point x="197" y="76"/>
+      <point x="296" y="145"/>
+      <point x="354" y="147" type="qcurve"/>
+      <point x="402" y="147"/>
+      <point x="436" y="137" type="qcurve"/>
+      <point x="436" y="800" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>c85c55556abfb5ef0b23a2a34fb08868b9d8adbdefa2d7a8a41e02232297ef44d4a4404ad687cfde2e1145a1fbb37b4e8fbfd85f187dbceba50c4454190a96ff</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

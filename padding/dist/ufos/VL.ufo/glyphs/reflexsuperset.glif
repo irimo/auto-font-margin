@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="reflexsuperset" format="2">
+  <advance width="1000"/>
+  <unicode hex="2287"/>
+  <outline>
+    <contour>
+      <point x="46" y="41" type="line"/>
+      <point x="956" y="41" type="line"/>
+      <point x="956" y="-23" type="line"/>
+      <point x="46" y="-23" type="line"/>
+    </contour>
+    <contour>
+      <point x="44" y="787" type="line"/>
+      <point x="608" y="787" type="line"/>
+      <point x="768" y="787"/>
+      <point x="952" y="595"/>
+      <point x="952" y="477" type="qcurve"/>
+      <point x="952" y="361"/>
+      <point x="768" y="169"/>
+      <point x="608" y="169" type="qcurve"/>
+      <point x="44" y="169" type="line"/>
+      <point x="44" y="235" type="line"/>
+      <point x="608" y="235" type="line"/>
+      <point x="742" y="235"/>
+      <point x="888" y="387"/>
+      <point x="888" y="477" type="qcurve"/>
+      <point x="888" y="569"/>
+      <point x="742" y="722"/>
+      <point x="608" y="722" type="qcurve"/>
+      <point x="44" y="722" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>89d4aeb6b0cb37235ed3de20e682ef0ab1d09950a4251446006eb4a6a291949b90b9ecb836bea839291dcd9eb8dc50aece057900d1db9a8eb46ef13a1f270e6d</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

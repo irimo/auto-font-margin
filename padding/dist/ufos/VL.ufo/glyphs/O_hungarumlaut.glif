@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Ohungarumlaut" format="2">
+  <advance width="500"/>
+  <unicode hex="0150"/>
+  <outline>
+    <contour>
+      <point x="340" y="960" type="line"/>
+      <point x="455" y="960" type="line"/>
+      <point x="305" y="790" type="line"/>
+      <point x="230" y="790" type="line"/>
+    </contour>
+    <contour>
+      <point x="170" y="960" type="line"/>
+      <point x="285" y="960" type="line"/>
+      <point x="135" y="790" type="line"/>
+      <point x="60" y="790" type="line"/>
+    </contour>
+    <contour>
+      <point x="143" y="740"/>
+      <point x="357" y="740"/>
+      <point x="460" y="571"/>
+      <point x="460" y="159"/>
+      <point x="357" y="-10"/>
+      <point x="143" y="-10"/>
+      <point x="40" y="159"/>
+      <point x="40" y="571"/>
+    </contour>
+    <contour>
+      <point x="206" y="62"/>
+      <point x="294" y="62"/>
+      <point x="348" y="113"/>
+      <point x="380" y="249"/>
+      <point x="380" y="481"/>
+      <point x="348" y="617"/>
+      <point x="294" y="668"/>
+      <point x="206" y="668"/>
+      <point x="152" y="617"/>
+      <point x="120" y="481"/>
+      <point x="120" y="249"/>
+      <point x="152" y="113"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>aa81253e19ce39d2d01e6eb554f4ddf3c7e9532c8151a4b154c823bee5e99d9625ae9ffa58229f3c99c5189707a5c26095248a178d6fb77f7741543ba2d547df</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

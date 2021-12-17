@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="ogonek" format="2">
+  <advance width="500"/>
+  <unicode hex="02DB"/>
+  <outline>
+    <contour>
+      <point x="245" y="5" type="line"/>
+      <point x="210" y="-31"/>
+      <point x="210" y="-80" type="qcurve"/>
+      <point x="210" y="-114"/>
+      <point x="252" y="-150"/>
+      <point x="290" y="-150" type="qcurve"/>
+      <point x="338" y="-150"/>
+      <point x="382" y="-128" type="qcurve"/>
+      <point x="382" y="-201" type="line"/>
+      <point x="333" y="-220"/>
+      <point x="280" y="-220" type="qcurve"/>
+      <point x="203" y="-220"/>
+      <point x="168" y="-186" type="qcurve"/>
+      <point x="132" y="-152"/>
+      <point x="132" y="-100" type="qcurve"/>
+      <point x="132" y="-43"/>
+      <point x="168" y="5" type="qcurve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>bd7663b2e6e25c30d5aad39b1a340c1680931a25d86a86bc1a73b98f51195df6127c7c4cd4fb0fabcd3217af5eb1e9f9849f5aeb6f672ec68d4302b9fc050a31</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

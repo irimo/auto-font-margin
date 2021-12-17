@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="endash" format="2">
+  <advance width="500"/>
+  <unicode hex="2013"/>
+  <outline>
+    <contour>
+      <point x="60" y="270" type="line"/>
+      <point x="60" y="321" type="line"/>
+      <point x="440" y="321" type="line"/>
+      <point x="440" y="270" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w500l60+270l60+321l440+321l440+270|</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni204A" format="2">
+  <advance width="500"/>
+  <unicode hex="204A"/>
+  <outline>
+    <contour>
+      <point x="62" y="520" type="line"/>
+      <point x="412" y="520" type="line"/>
+      <point x="325" y="-220" type="line"/>
+      <point x="243" y="-220" type="line"/>
+      <point x="322" y="450" type="line"/>
+      <point x="62" y="450" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w500l62+520l412+520l325-220l243-220l322+450l62+450|</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

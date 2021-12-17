@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="T" format="2">
+  <advance width="500"/>
+  <unicode hex="0054"/>
+  <outline>
+    <contour>
+      <point x="209" y="0" type="line"/>
+      <point x="209" y="669" type="line"/>
+      <point x="55" y="669" type="line"/>
+      <point x="55" y="740" type="line"/>
+      <point x="445" y="740" type="line"/>
+      <point x="445" y="669" type="line"/>
+      <point x="291" y="669" type="line"/>
+      <point x="291" y="0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w500l209+0l209+669l55+669l55+740l445+740l445+669l291+669l291+0|</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

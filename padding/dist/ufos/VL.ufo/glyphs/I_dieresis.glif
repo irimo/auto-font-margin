@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Idieresis" format="2">
+  <advance width="500"/>
+  <unicode hex="00CF"/>
+  <outline>
+    <contour>
+      <point x="290" y="810" type="line"/>
+      <point x="290" y="940" type="line"/>
+      <point x="370" y="940" type="line"/>
+      <point x="370" y="810" type="line"/>
+    </contour>
+    <contour>
+      <point x="130" y="810" type="line"/>
+      <point x="130" y="940" type="line"/>
+      <point x="210" y="940" type="line"/>
+      <point x="210" y="810" type="line"/>
+    </contour>
+    <contour>
+      <point x="410" y="0" type="line"/>
+      <point x="90" y="0" type="line"/>
+      <point x="90" y="70" type="line"/>
+      <point x="208" y="70" type="line"/>
+      <point x="208" y="660" type="line"/>
+      <point x="90" y="660" type="line"/>
+      <point x="90" y="730" type="line"/>
+      <point x="410" y="730" type="line"/>
+      <point x="410" y="660" type="line"/>
+      <point x="292" y="660" type="line"/>
+      <point x="292" y="70" type="line"/>
+      <point x="410" y="70" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>1bb0f45c6b414c63952abd1d5db8346166185a1856c9c3097ca2de237c6fa1dcd5ac0797a6752eb0644b92647f869585911ec72e7ec5523759ea641db00cb814</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

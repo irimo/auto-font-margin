@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Thorn" format="2">
+  <advance width="500"/>
+  <unicode hex="00DE"/>
+  <outline>
+    <contour>
+      <point x="160" y="610" type="line"/>
+      <point x="197" y="615"/>
+      <point x="238" y="615" type="qcurve"/>
+      <point x="352" y="615"/>
+      <point x="458" y="509"/>
+      <point x="458" y="395" type="qcurve"/>
+      <point x="458" y="275"/>
+      <point x="353" y="170"/>
+      <point x="240" y="170" type="qcurve"/>
+      <point x="205" y="170"/>
+      <point x="160" y="175" type="qcurve"/>
+      <point x="160" y="0" type="line"/>
+      <point x="78" y="0" type="line"/>
+      <point x="78" y="730" type="line"/>
+      <point x="160" y="730" type="line"/>
+    </contour>
+    <contour>
+      <point x="160" y="245" type="line"/>
+      <point x="188" y="240"/>
+      <point x="230" y="240" type="qcurve"/>
+      <point x="307" y="240"/>
+      <point x="378" y="311"/>
+      <point x="378" y="395" type="qcurve"/>
+      <point x="378" y="474"/>
+      <point x="306" y="545"/>
+      <point x="230" y="545" type="qcurve"/>
+      <point x="187" y="545"/>
+      <point x="160" y="537" type="qcurve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>076ab568be36d82264037e58ad1d251b7712a4665169d2e6f8f384d3b4791e5e87d81996dfefbd894947892494398a488c3e01df3a0bd470ac5e718e0f30451f</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

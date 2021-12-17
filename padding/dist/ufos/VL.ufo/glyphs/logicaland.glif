@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="logicaland" format="2">
+  <advance width="1000"/>
+  <unicode hex="2227"/>
+  <outline>
+    <contour>
+      <point x="42" y="-31" type="line"/>
+      <point x="463" y="808" type="line"/>
+      <point x="479" y="840"/>
+      <point x="521" y="840"/>
+      <point x="538" y="808" type="qcurve"/>
+      <point x="959" y="-31" type="line"/>
+      <point x="907" y="-60" type="line"/>
+      <point x="504" y="742" type="line"/>
+      <point x="501" y="746"/>
+      <point x="497" y="741" type="qcurve"/>
+      <point x="94" y="-60" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w1000l42-31l463+808o479+840o521+840q538+808l959-31l907-60l504+742o501+746q497+741l94-60|</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

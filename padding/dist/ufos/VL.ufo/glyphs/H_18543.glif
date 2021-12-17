@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="H18543" format="2">
+  <advance width="757"/>
+  <unicode hex="25AA"/>
+  <outline>
+    <contour>
+      <point x="200" y="182" type="line"/>
+      <point x="200" y="548" type="line"/>
+      <point x="564" y="548" type="line"/>
+      <point x="564" y="182" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w757l200+182l200+548l564+548l564+182|</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

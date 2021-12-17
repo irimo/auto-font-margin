@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="ncaron" format="2">
+  <advance width="500"/>
+  <unicode hex="0148"/>
+  <outline>
+    <contour>
+      <point x="251" y="630" type="line"/>
+      <point x="332" y="760" type="line"/>
+      <point x="440" y="760" type="line"/>
+      <point x="310" y="590" type="line"/>
+      <point x="190" y="590" type="line"/>
+      <point x="60" y="760" type="line"/>
+      <point x="168" y="760" type="line"/>
+      <point x="249" y="630" type="line"/>
+    </contour>
+    <contour>
+      <point x="440" y="0" type="line"/>
+      <point x="363" y="0" type="line"/>
+      <point x="363" y="312" type="line"/>
+      <point x="363" y="400"/>
+      <point x="323" y="459"/>
+      <point x="270" y="459" type="qcurve"/>
+      <point x="220" y="459"/>
+      <point x="149" y="347"/>
+      <point x="149" y="252" type="qcurve"/>
+      <point x="149" y="0" type="line"/>
+      <point x="70" y="0" type="line"/>
+      <point x="70" y="520" type="line"/>
+      <point x="144" y="520" type="line"/>
+      <point x="146" y="445" type="line"/>
+      <point x="148" y="445" type="line"/>
+      <point x="167" y="483"/>
+      <point x="245" y="530"/>
+      <point x="290" y="530" type="qcurve"/>
+      <point x="369" y="530"/>
+      <point x="440" y="439"/>
+      <point x="440" y="330" type="qcurve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>43f09b2278c77575ecdd52d73d58900c9e3b4c0dd0c4b9d49a9ae61a62200e237368515fde2fff107f36b9085e651ae882d8797266263e7a07ce3794186eec73</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

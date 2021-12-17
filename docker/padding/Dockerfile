@@ -53,7 +53,13 @@ WORKDIR /workspace/opencv-${version}/build
 RUN cmake -OPENCV_EXTRA_MODULES_PATH=/workspace/opencv_contrib-${version}/modules ..
 RUN make -j8 && make install && ldconfig
 
-
+RUN pip install --upgrade ufo-extractor defcon argparse
+RUN pip uninstall setuptools
+RUN pip install setuptools
+RUN git clone https://github.com/typesupply/ufo2svg.git
+RUN cd ufo2svg/
+RUN python setup.py build
+RUN python3 setup.py install
 
 WORKDIR /
 RUN rm -rf workspace/

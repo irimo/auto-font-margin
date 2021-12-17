@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uniFA5E" format="2">
+  <advance width="1000"/>
+  <unicode hex="FA5E"/>
+  <outline>
+    <contour>
+      <point x="355" y="522" type="line"/>
+      <point x="278" y="522" type="line"/>
+      <point x="278" y="637" type="line"/>
+      <point x="60" y="637" type="line"/>
+      <point x="60" y="702" type="line"/>
+      <point x="278" y="702" type="line"/>
+      <point x="278" y="823" type="line"/>
+      <point x="355" y="823" type="line"/>
+      <point x="355" y="702" type="line"/>
+      <point x="460" y="702" type="line"/>
+      <point x="460" y="637" type="line"/>
+      <point x="355" y="637" type="line"/>
+    </contour>
+    <contour>
+      <point x="645" y="522" type="line"/>
+      <point x="645" y="637" type="line"/>
+      <point x="540" y="637" type="line"/>
+      <point x="540" y="702" type="line"/>
+      <point x="645" y="702" type="line"/>
+      <point x="645" y="823" type="line"/>
+      <point x="722" y="823" type="line"/>
+      <point x="722" y="702" type="line"/>
+      <point x="940" y="702" type="line"/>
+      <point x="940" y="637" type="line"/>
+      <point x="722" y="637" type="line"/>
+      <point x="722" y="522" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>80a79eafac97fd2ffb52d0ea21696aaff29efc0c790884962d954f85a6f9cb0a416c9f72717a471da677472ba3b5af0f8a9f87b0188c816f85773ba8be5f60b3</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

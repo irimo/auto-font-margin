@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Ydieresis" format="2">
+  <advance width="500"/>
+  <unicode hex="0178"/>
+  <outline>
+    <contour>
+      <point x="290" y="810" type="line"/>
+      <point x="290" y="940" type="line"/>
+      <point x="370" y="940" type="line"/>
+      <point x="370" y="810" type="line"/>
+    </contour>
+    <contour>
+      <point x="130" y="810" type="line"/>
+      <point x="130" y="940" type="line"/>
+      <point x="210" y="940" type="line"/>
+      <point x="210" y="810" type="line"/>
+    </contour>
+    <contour>
+      <point x="251" y="375" type="line"/>
+      <point x="253" y="375" type="line"/>
+      <point x="385" y="730" type="line"/>
+      <point x="470" y="730" type="line"/>
+      <point x="291" y="290" type="line"/>
+      <point x="291" y="0" type="line"/>
+      <point x="209" y="0" type="line"/>
+      <point x="209" y="290" type="line"/>
+      <point x="30" y="730" type="line"/>
+      <point x="120" y="730" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>9f6a009e2cf9bfbb32dff598fef476d7ec457cfdcdf91fc5a2fbd09a5b917c5c7b9e2ef367e78bb7b03b2fb2a03947619594fa02540001edbfef415c4001ea14</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>
