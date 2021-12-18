@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="odieresis" format="2">
+  <advance width="500"/>
+  <unicode hex="00F6"/>
+  <outline>
+    <contour>
+      <point x="50" y="530"/>
+      <point x="450" y="530"/>
+      <point x="450" y="-10"/>
+      <point x="50" y="-10"/>
+    </contour>
+    <contour>
+      <point x="290" y="610" type="line"/>
+      <point x="290" y="740" type="line"/>
+      <point x="370" y="740" type="line"/>
+      <point x="370" y="610" type="line"/>
+    </contour>
+    <contour>
+      <point x="130" y="610" type="line"/>
+      <point x="130" y="740" type="line"/>
+      <point x="210" y="740" type="line"/>
+      <point x="210" y="610" type="line"/>
+    </contour>
+    <contour>
+      <point x="189" y="59"/>
+      <point x="311" y="59"/>
+      <point x="368" y="150"/>
+      <point x="368" y="370"/>
+      <point x="311" y="461"/>
+      <point x="189" y="461"/>
+      <point x="132" y="370"/>
+      <point x="132" y="150"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>a6f761085e905c37fd983a6d1f371654166c795cb6555ccf99d323dc762d100b2ca5c22b2939243739345fcfd939d5366bde8b756f9bd2934e92fd41d5a1def0</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

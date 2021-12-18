@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni02CC" format="2">
+  <advance width="500"/>
+  <unicode hex="02CC"/>
+  <outline>
+    <contour>
+      <point x="208" y="-220" type="line"/>
+      <point x="208" y="80" type="line"/>
+      <point x="292" y="80" type="line"/>
+      <point x="292" y="-220" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w500l208-220l208+80l292+80l292-220|</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Iotatonos" format="2">
+  <advance width="500"/>
+  <unicode hex="038A"/>
+  <outline>
+    <contour>
+      <point x="420" y="0" type="line"/>
+      <point x="100" y="0" type="line"/>
+      <point x="100" y="70" type="line"/>
+      <point x="217" y="70" type="line"/>
+      <point x="217" y="660" type="line"/>
+      <point x="100" y="660" type="line"/>
+      <point x="100" y="690" type="line"/>
+      <point x="20" y="690" type="line"/>
+      <point x="130" y="860" type="line"/>
+      <point x="250" y="860" type="line"/>
+      <point x="135" y="730" type="line"/>
+      <point x="420" y="730" type="line"/>
+      <point x="420" y="660" type="line"/>
+      <point x="302" y="660" type="line"/>
+      <point x="302" y="70" type="line"/>
+      <point x="420" y="70" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w500l420+0l100+0l100+70l217+70l217+660l100+660l100+690l20+690l130+860l250+860l135+730l420+730l420+660l302+660l302+70l420+70|</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

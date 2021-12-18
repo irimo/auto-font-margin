@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="lcaron" format="2">
+  <advance width="500"/>
+  <unicode hex="013E"/>
+  <outline>
+    <contour>
+      <point x="362" y="730" type="line"/>
+      <point x="472" y="730" type="line"/>
+      <point x="362" y="490" type="line"/>
+      <point x="292" y="490" type="line"/>
+    </contour>
+    <contour>
+      <point x="261" y="150" type="line"/>
+      <point x="261" y="84"/>
+      <point x="282" y="58"/>
+      <point x="335" y="58" type="qcurve"/>
+      <point x="368" y="58"/>
+      <point x="410" y="64" type="qcurve"/>
+      <point x="410" y="-5" type="line"/>
+      <point x="363" y="-10"/>
+      <point x="325" y="-10" type="qcurve"/>
+      <point x="235" y="-10"/>
+      <point x="179" y="47"/>
+      <point x="179" y="140" type="qcurve"/>
+      <point x="179" y="662" type="line"/>
+      <point x="55" y="662" type="line"/>
+      <point x="55" y="730" type="line"/>
+      <point x="261" y="730" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>c3826e2eb11020b41f07312f6883c27a2124617d747f3d3a92b85930a94f5ee24042cfe996c53da6c490f96684961f224d6f14d73205222c90f9ea0386e2b5de</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="arrowdbldown" format="2">
+  <advance width="1000"/>
+  <unicode hex="21D3"/>
+  <outline>
+    <contour>
+      <point x="587" y="151" type="line"/>
+      <point x="720" y="302" type="line"/>
+      <point x="755" y="272" type="line"/>
+      <point x="500" y="-18" type="line"/>
+      <point x="245" y="272" type="line"/>
+      <point x="280" y="302" type="line"/>
+      <point x="413" y="151" type="line"/>
+      <point x="413" y="708" type="line"/>
+      <point x="460" y="708" type="line"/>
+      <point x="460" y="98" type="line"/>
+      <point x="500" y="52" type="line"/>
+      <point x="540" y="98" type="line"/>
+      <point x="540" y="708" type="line"/>
+      <point x="587" y="708" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w1000l587+151l720+302l755+272l500-18l245+272l280+302l413+151l413+708l460+708l460+98l500+52l540+98l540+708l587+708|</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

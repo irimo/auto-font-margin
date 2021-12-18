@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni5341" format="2">
+  <advance width="1000"/>
+  <unicode hex="5341"/>
+  <outline>
+    <contour>
+      <point x="50" y="418" type="line"/>
+      <point x="458" y="418" type="line"/>
+      <point x="458" y="810" type="line"/>
+      <point x="542" y="810" type="line"/>
+      <point x="542" y="418" type="line"/>
+      <point x="950" y="418" type="line"/>
+      <point x="950" y="345" type="line"/>
+      <point x="542" y="345" type="line"/>
+      <point x="542" y="-90" type="line"/>
+      <point x="458" y="-90" type="line"/>
+      <point x="458" y="345" type="line"/>
+      <point x="50" y="345" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w1000l50+418l458+418l458+810l542+810l542+418l950+418l950+345l542+345l542-90l458-90l458+345l50+345|</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

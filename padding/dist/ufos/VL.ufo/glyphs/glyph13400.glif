@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="glyph13400" format="2">
+  <advance width="1000"/>
+  <outline>
+    <contour>
+      <point x="694" y="779" type="qcurve"/>
+      <point x="753" y="814" type="line"/>
+      <point x="854" y="657" type="line"/>
+      <point x="795" y="626" type="line"/>
+      <point x="746" y="706"/>
+    </contour>
+    <contour>
+      <point x="826" y="813" type="qcurve"/>
+      <point x="886" y="848" type="line"/>
+      <point x="958" y="740"/>
+      <point x="990" y="686" type="qcurve"/>
+      <point x="930" y="655" type="line"/>
+      <point x="884" y="731"/>
+    </contour>
+    <contour>
+      <point x="357" y="801" type="qcurve"/>
+      <point x="432" y="801" type="line"/>
+      <point x="432" y="703"/>
+      <point x="427" y="605" type="qcurve"/>
+      <point x="840" y="605" type="line"/>
+      <point x="840" y="531" type="line"/>
+      <point x="840" y="232"/>
+      <point x="825" y="144" type="qcurve"/>
+      <point x="808" y="41"/>
+      <point x="752" y="7" type="qcurve"/>
+      <point x="703" y="-22"/>
+      <point x="569" y="-25" type="qcurve"/>
+      <point x="545" y="-25"/>
+      <point x="510" y="-25" type="qcurve"/>
+      <point x="510" y="45" type="line"/>
+      <point x="637" y="45"/>
+      <point x="674" y="57" type="qcurve"/>
+      <point x="724" y="73"/>
+      <point x="741" y="133" type="qcurve"/>
+      <point x="759" y="194"/>
+      <point x="760" y="412" type="qcurve"/>
+      <point x="760" y="438"/>
+      <point x="760" y="498" type="qcurve"/>
+      <point x="760" y="535" type="line"/>
+      <point x="422" y="535" type="line"/>
+      <point x="404" y="319"/>
+      <point x="282" y="67"/>
+      <point x="156" y="-31" type="qcurve"/>
+      <point x="108" y="23" type="line"/>
+      <point x="221" y="110"/>
+      <point x="330" y="337"/>
+      <point x="347" y="535" type="qcurve"/>
+      <point x="113" y="535" type="line"/>
+      <point x="113" y="605" type="line"/>
+      <point x="352" y="605" type="line"/>
+      <point x="357" y="703"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>146a0abd04fe9ebb4174abd433f675a7ffc057983eea70696a8d9d23244f81c481951d2e7145c09505cfe26205d07e3ef6c00de556b4ca30c7c9a93ccf5c11c1</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

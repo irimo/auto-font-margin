@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uring" format="2">
+  <advance width="500"/>
+  <unicode hex="016F"/>
+  <outline>
+    <contour>
+      <point x="65" y="520" type="line"/>
+      <point x="142" y="520" type="line"/>
+      <point x="142" y="198" type="line"/>
+      <point x="142" y="115"/>
+      <point x="179" y="61"/>
+      <point x="230" y="61" type="qcurve"/>
+      <point x="279" y="61"/>
+      <point x="346" y="171"/>
+      <point x="346" y="268" type="qcurve"/>
+      <point x="346" y="520" type="line"/>
+      <point x="425" y="520" type="line"/>
+      <point x="425" y="0" type="line"/>
+      <point x="351" y="0" type="line"/>
+      <point x="349" y="75" type="line"/>
+      <point x="347" y="75" type="line"/>
+      <point x="328" y="35"/>
+      <point x="254" y="-10"/>
+      <point x="210" y="-10" type="qcurve"/>
+      <point x="133" y="-10"/>
+      <point x="65" y="76"/>
+      <point x="65" y="180" type="qcurve"/>
+    </contour>
+    <contour>
+      <point x="380" y="739"/>
+      <point x="380" y="631"/>
+      <point x="304" y="555"/>
+      <point x="196" y="555"/>
+      <point x="120" y="631"/>
+      <point x="120" y="739"/>
+      <point x="196" y="815"/>
+      <point x="304" y="815"/>
+    </contour>
+    <contour>
+      <point x="320" y="656"/>
+      <point x="320" y="714"/>
+      <point x="279" y="755"/>
+      <point x="221" y="755"/>
+      <point x="180" y="714"/>
+      <point x="180" y="656"/>
+      <point x="221" y="615"/>
+      <point x="279" y="615"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>a9e51ffb06d587aac6eb083a7388777a5c8eb3cd541efd76eac6e8c05c0922260d301a9a9089ed43ae6551ebd839d9a7b0b3f08bbf34ea5fc7fd8ccd6f9d827c</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

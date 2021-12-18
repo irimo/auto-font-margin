@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="afii10085" format="2">
+  <advance width="500"/>
+  <unicode hex="0443"/>
+  <outline>
+    <contour>
+      <point x="264" y="110" type="line"/>
+      <point x="266" y="110" type="line"/>
+      <point x="378" y="520" type="line"/>
+      <point x="465" y="520" type="line"/>
+      <point x="305" y="0" type="line"/>
+      <point x="274" y="-101"/>
+      <point x="215" y="-196"/>
+      <point x="137" y="-230"/>
+      <point x="65" y="-230" type="qcurve"/>
+      <point x="65" y="-160" type="line"/>
+      <point x="106" y="-160"/>
+      <point x="145" y="-153"/>
+      <point x="183" y="-117"/>
+      <point x="206" y="-60"/>
+      <point x="225" y="0" type="qcurve"/>
+      <point x="45" y="520" type="line"/>
+      <point x="133" y="520" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>a5c6f7bf9bf9bbb3cec31d8e54a01a9be91bc73190df56f18cf2203f67ddc332033db39bb2f552b4f50a96b001c3e5c87bbe8db752fbb1d642c4fe206c0c729a</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

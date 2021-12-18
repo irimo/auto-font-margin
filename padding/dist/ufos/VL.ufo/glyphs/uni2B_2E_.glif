@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni2B2E" format="2">
+  <advance width="850"/>
+  <unicode hex="2B2E"/>
+  <outline>
+    <contour>
+      <point x="615" y="-30"/>
+      <point x="385" y="-30"/>
+      <point x="224" y="202"/>
+      <point x="224" y="528"/>
+      <point x="385" y="760"/>
+      <point x="615" y="760"/>
+      <point x="776" y="528"/>
+      <point x="776" y="202"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w850o615-30o385-30o224+202o224+528o385+760o615+760o776+528o776+202|</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

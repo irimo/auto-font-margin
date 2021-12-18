@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni1FCB" format="2">
+  <advance width="500"/>
+  <unicode hex="1FCB"/>
+  <outline>
+    <contour>
+      <point x="140" y="432" type="line"/>
+      <point x="356" y="432" type="line"/>
+      <point x="356" y="730" type="line"/>
+      <point x="440" y="730" type="line"/>
+      <point x="440" y="0" type="line"/>
+      <point x="356" y="0" type="line"/>
+      <point x="356" y="360" type="line"/>
+      <point x="140" y="360" type="line"/>
+      <point x="140" y="0" type="line"/>
+      <point x="60" y="0" type="line"/>
+      <point x="60" y="730" type="line"/>
+      <point x="140" y="730" type="line"/>
+    </contour>
+    <contour>
+      <point x="260" y="960" type="line"/>
+      <point x="380" y="960" type="line"/>
+      <point x="230" y="790" type="line"/>
+      <point x="150" y="790" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w500l140+432l356+432l356+730l440+730l440+0l356+0l356+360l140+360l140+0l60+0l60+730l140+730|l260+960l380+960l230+790l150+790|</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

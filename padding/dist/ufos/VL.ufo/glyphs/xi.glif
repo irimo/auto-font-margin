@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="xi" format="2">
+  <advance width="500"/>
+  <unicode hex="03BE"/>
+  <outline>
+    <contour>
+      <point x="68" y="545" type="qcurve"/>
+      <point x="68" y="635"/>
+      <point x="162" y="680" type="qcurve"/>
+      <point x="162" y="682" type="line"/>
+      <point x="70" y="682" type="line"/>
+      <point x="70" y="750" type="line"/>
+      <point x="410" y="750" type="line"/>
+      <point x="410" y="682" type="line"/>
+      <point x="148" y="682"/>
+      <point x="148" y="552" type="qcurve"/>
+      <point x="148" y="430"/>
+      <point x="332" y="430" type="qcurve"/>
+      <point x="410" y="430" type="line"/>
+      <point x="410" y="360" type="line"/>
+      <point x="332" y="360" type="line"/>
+      <point x="236" y="360"/>
+      <point x="127" y="278"/>
+      <point x="127" y="212" type="qcurve"/>
+      <point x="127" y="132"/>
+      <point x="205" y="59"/>
+      <point x="290" y="59" type="qcurve"/>
+      <point x="470" y="59"/>
+      <point x="470" y="-82" type="qcurve"/>
+      <point x="470" y="-230"/>
+      <point x="270" y="-230" type="qcurve"/>
+      <point x="197" y="-230"/>
+      <point x="120" y="-201" type="qcurve"/>
+      <point x="120" y="-130" type="line"/>
+      <point x="199" y="-161"/>
+      <point x="265" y="-161" type="qcurve"/>
+      <point x="388" y="-161"/>
+      <point x="388" y="-85" type="qcurve"/>
+      <point x="388" y="-47"/>
+      <point x="333" y="-10"/>
+      <point x="270" y="-10" type="qcurve"/>
+      <point x="45" y="-10"/>
+      <point x="45" y="205" type="qcurve"/>
+      <point x="45" y="274"/>
+      <point x="132" y="378"/>
+      <point x="201" y="393" type="qcurve"/>
+      <point x="201" y="396" type="line"/>
+      <point x="138" y="409"/>
+      <point x="68" y="489"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>f8c981fe875ea61d18b506afa87c1b03361cebd69bf27a90db31fed1f3b6ec6ff407a743f629e1dd732a8e604025bef66d29e9b2942e2a826488720d3eb66cf6</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

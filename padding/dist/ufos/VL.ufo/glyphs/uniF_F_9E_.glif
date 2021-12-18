@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uniFF9E" format="2">
+  <advance width="500"/>
+  <unicode hex="FF9E"/>
+  <outline>
+    <contour>
+      <point x="7" y="735" type="qcurve"/>
+      <point x="66" y="767" type="line"/>
+      <point x="116" y="704"/>
+      <point x="158" y="642" type="qcurve"/>
+      <point x="98" y="611" type="line"/>
+      <point x="55" y="673"/>
+    </contour>
+    <contour>
+      <point x="120" y="764" type="qcurve"/>
+      <point x="180" y="797" type="line"/>
+      <point x="231" y="733"/>
+      <point x="274" y="670" type="qcurve"/>
+      <point x="213" y="638" type="line"/>
+      <point x="171" y="699"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w500q7+735l66+767o116+704q158+642l98+611o55+673|q120+764l180+797o231+733q274+670l213+638o171+699|</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

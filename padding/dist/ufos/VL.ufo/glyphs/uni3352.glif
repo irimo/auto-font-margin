@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni3352" format="2">
+  <advance width="1000"/>
+  <unicode hex="3352"/>
+  <outline>
+    <contour>
+      <point x="125" y="506" type="line"/>
+      <point x="125" y="729" type="line"/>
+      <point x="194" y="729" type="line"/>
+      <point x="194" y="506" type="line"/>
+    </contour>
+    <contour>
+      <point x="374" y="729" type="line"/>
+      <point x="445" y="729" type="line"/>
+      <point x="445" y="594" type="line"/>
+      <point x="445" y="466"/>
+      <point x="320" y="337"/>
+      <point x="186" y="325" type="qcurve"/>
+      <point x="172" y="385" type="line"/>
+      <point x="287" y="399"/>
+      <point x="374" y="490"/>
+      <point x="374" y="592" type="qcurve"/>
+    </contour>
+    <contour>
+      <point x="835" y="158" type="qcurve"/>
+      <point x="511" y="158" type="line"/>
+      <point x="511" y="217" type="line"/>
+      <point x="838" y="217" type="line"/>
+      <point x="838" y="233" type="line"/>
+      <point x="851" y="217" type="line"/>
+      <point x="902" y="217" type="line"/>
+      <point x="902" y="196" type="line"/>
+      <point x="902" y="-30"/>
+      <point x="598" y="-51" type="qcurve"/>
+      <point x="587" y="-52" type="line"/>
+      <point x="576" y="7" type="line"/>
+      <point x="591" y="8" type="line"/>
+      <point x="810" y="23"/>
+    </contour>
+    <contour>
+      <point x="547" y="278" type="line"/>
+      <point x="547" y="338" type="line"/>
+      <point x="869" y="338" type="line"/>
+      <point x="869" y="278" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>874c65bcba014fce3b2b54fb92ceaf9d607af1d9c71b991b8fec9f1bf1dfcf2aa73553774cf57978f5d6ea3eeae50f82505a1fb8c3385848dfb7b951b88832a5</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

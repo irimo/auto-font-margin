@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="afii57636" format="2">
+  <advance width="500"/>
+  <unicode hex="20AA"/>
+  <outline>
+    <contour>
+      <point x="344" y="515" type="qcurve"/>
+      <point x="344" y="145" type="line"/>
+      <point x="270" y="145" type="line"/>
+      <point x="270" y="505" type="line"/>
+      <point x="270" y="587"/>
+      <point x="214" y="658"/>
+      <point x="155" y="658" type="qcurve"/>
+      <point x="116" y="658" type="line"/>
+      <point x="116" y="0" type="line"/>
+      <point x="40" y="0" type="line"/>
+      <point x="40" y="730" type="line"/>
+      <point x="155" y="730" type="line"/>
+      <point x="250" y="730"/>
+      <point x="344" y="625"/>
+    </contour>
+    <contour>
+      <point x="156" y="215" type="qcurve"/>
+      <point x="156" y="585" type="line"/>
+      <point x="230" y="585" type="line"/>
+      <point x="230" y="225" type="line"/>
+      <point x="230" y="143"/>
+      <point x="286" y="72"/>
+      <point x="345" y="72" type="qcurve"/>
+      <point x="384" y="72" type="line"/>
+      <point x="384" y="730" type="line"/>
+      <point x="460" y="730" type="line"/>
+      <point x="460" y="0" type="line"/>
+      <point x="345" y="0" type="line"/>
+      <point x="250" y="0"/>
+      <point x="156" y="105"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>9b635993cd5d38e1ce6f5a6580467d069e52cbfa62dc296894ea0ba73005746bfe21e0a4f0e8fc018733d0b7fe3e9c4a6b15129268ff24e86e04f4df0259bcbc</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

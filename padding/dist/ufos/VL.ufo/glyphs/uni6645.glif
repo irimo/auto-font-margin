@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni6645" format="2">
+  <advance width="1017"/>
+  <unicode hex="6645"/>
+  <outline>
+    <contour>
+      <point x="382" y="709" type="line"/>
+      <point x="382" y="775" type="line"/>
+      <point x="981" y="775" type="line"/>
+      <point x="981" y="709" type="line"/>
+    </contour>
+    <contour>
+      <point x="471" y="101" type="line"/>
+      <point x="471" y="587" type="line"/>
+      <point x="894" y="587" type="line"/>
+      <point x="887" y="101" type="line"/>
+    </contour>
+    <contour>
+      <point x="537" y="323" type="line"/>
+      <point x="537" y="166" type="line"/>
+      <point x="822" y="166" type="line"/>
+      <point x="824" y="323" type="line"/>
+    </contour>
+    <contour>
+      <point x="825" y="389" type="line"/>
+      <point x="827" y="522" type="line"/>
+      <point x="537" y="522" type="line"/>
+      <point x="537" y="389" type="line"/>
+    </contour>
+    <contour>
+      <point x="382" y="-87" type="line"/>
+      <point x="382" y="-21" type="line"/>
+      <point x="981" y="-21" type="line"/>
+      <point x="981" y="-87" type="line"/>
+    </contour>
+    <contour>
+      <point x="103" y="714" type="line"/>
+      <point x="345" y="714" type="line"/>
+      <point x="345" y="86" type="line"/>
+      <point x="103" y="86" type="line"/>
+    </contour>
+    <contour>
+      <point x="170" y="385" type="line"/>
+      <point x="170" y="152" type="line"/>
+      <point x="279" y="152" type="line"/>
+      <point x="279" y="385" type="line"/>
+    </contour>
+    <contour>
+      <point x="279" y="452" type="line"/>
+      <point x="279" y="648" type="line"/>
+      <point x="170" y="648" type="line"/>
+      <point x="170" y="452" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>7aac3732ed3d0618b225fcbf4387774a9911930572ae84486886241dcbedb938e890c2289987691c3bb782abd133d794366038483b04dddac8d1766fd828c403</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

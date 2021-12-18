@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Abreve" format="2">
+  <advance width="500"/>
+  <unicode hex="0102"/>
+  <outline>
+    <contour>
+      <point x="328" y="785"/>
+      <point x="172" y="785"/>
+      <point x="80" y="871"/>
+      <point x="80" y="945" type="qcurve"/>
+      <point x="155" y="945" type="line"/>
+      <point x="157" y="902"/>
+      <point x="208" y="855"/>
+      <point x="292" y="855"/>
+      <point x="343" y="902"/>
+      <point x="345" y="945" type="qcurve"/>
+      <point x="420" y="945" type="line"/>
+      <point x="420" y="871"/>
+    </contour>
+    <contour>
+      <point x="249" y="660" type="line"/>
+      <point x="247" y="660" type="line"/>
+      <point x="164" y="280" type="line"/>
+      <point x="332" y="280" type="line"/>
+    </contour>
+    <contour>
+      <point x="348" y="210" type="line"/>
+      <point x="148" y="210" type="line"/>
+      <point x="102" y="0" type="line"/>
+      <point x="20" y="0" type="line"/>
+      <point x="200" y="730" type="line"/>
+      <point x="300" y="730" type="line"/>
+      <point x="480" y="0" type="line"/>
+      <point x="394" y="0" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>d04ad2dbc20dbd44ff10ca8a407bd64788e5c89593f37e9d8c33ef7fccb3eafa5eb1cce045cf64ceb3144d41037e6c6a435c0823be4b6e8c3755c1aa1d6d1b68</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

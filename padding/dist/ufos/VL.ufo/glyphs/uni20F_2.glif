@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni20F2" format="2">
+  <advance width="1000"/>
+  <unicode hex="20F2"/>
+  <outline>
+    <contour>
+      <point x="467" y="765" type="line"/>
+      <point x="920" y="375" type="line"/>
+      <point x="467" y="-15" type="line"/>
+      <point x="467" y="112" type="line"/>
+      <point x="140" y="112" type="line"/>
+      <point x="140" y="158" type="line"/>
+      <point x="140" y="638" type="line"/>
+      <point x="467" y="638" type="line"/>
+    </contour>
+    <contour>
+      <point x="187" y="158" type="line"/>
+      <point x="513" y="158" type="line"/>
+      <point x="513" y="85" type="line"/>
+      <point x="848" y="375" type="line"/>
+      <point x="513" y="665" type="line"/>
+      <point x="513" y="592" type="line"/>
+      <point x="187" y="592" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w1000l467+765l920+375l467-15l467+112l140+112l140+158l140+638l467+638|l187+158l513+158l513+85l848+375l513+665l513+592l187+592|</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

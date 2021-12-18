@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni026B" format="2">
+  <advance width="500"/>
+  <unicode hex="026B"/>
+  <outline>
+    <contour>
+      <point x="464" y="438" type="line"/>
+      <point x="465" y="292"/>
+      <point x="367" y="292" type="qcurve"/>
+      <point x="325" y="292"/>
+      <point x="280" y="313" type="qcurve"/>
+      <point x="280" y="150" type="line"/>
+      <point x="280" y="125"/>
+      <point x="280" y="99"/>
+      <point x="284" y="87" type="qcurve"/>
+      <point x="287" y="75"/>
+      <point x="293" y="67"/>
+      <point x="304" y="63" type="qcurve"/>
+      <point x="314" y="59"/>
+      <point x="324" y="58" type="qcurve"/>
+      <point x="334" y="58"/>
+      <point x="354" y="58" type="qcurve"/>
+      <point x="392" y="58"/>
+      <point x="429" y="64" type="qcurve"/>
+      <point x="429" y="-5" type="line"/>
+      <point x="387" y="-10"/>
+      <point x="344" y="-10" type="qcurve"/>
+      <point x="254" y="-10"/>
+      <point x="198" y="46"/>
+      <point x="198" y="140" type="qcurve"/>
+      <point x="198" y="363" type="line"/>
+      <point x="166" y="380"/>
+      <point x="141" y="380" type="qcurve"/>
+      <point x="103" y="380"/>
+      <point x="104" y="292" type="qcurve"/>
+      <point x="34" y="292" type="line"/>
+      <point x="33" y="448"/>
+      <point x="131" y="448" type="qcurve"/>
+      <point x="164" y="448"/>
+      <point x="198" y="435" type="qcurve"/>
+      <point x="198" y="662" type="line"/>
+      <point x="69" y="662" type="line"/>
+      <point x="69" y="730" type="line"/>
+      <point x="280" y="730" type="line"/>
+      <point x="280" y="389" type="line"/>
+      <point x="325" y="360"/>
+      <point x="357" y="360" type="qcurve"/>
+      <point x="395" y="360"/>
+      <point x="394" y="438" type="qcurve"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>b32c8f0cb647fe8de5e1eb73739153299d8e43ae1d0d8e8f279a4104539ae578f583eba974f843106daf38611757ab5bc740eac377806946db4affd26fa93ef5</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

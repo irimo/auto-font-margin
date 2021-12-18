@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uni1E44" format="2">
+  <advance width="500"/>
+  <unicode hex="1E44"/>
+  <outline>
+    <contour>
+      <point x="149" y="550" type="line"/>
+      <point x="149" y="0" type="line"/>
+      <point x="65" y="0" type="line"/>
+      <point x="65" y="730" type="line"/>
+      <point x="149" y="730" type="line"/>
+      <point x="353" y="180" type="line"/>
+      <point x="355" y="180" type="line"/>
+      <point x="355" y="730" type="line"/>
+      <point x="435" y="730" type="line"/>
+      <point x="435" y="0" type="line"/>
+      <point x="355" y="0" type="line"/>
+      <point x="151" y="550" type="line"/>
+    </contour>
+    <contour>
+      <point x="208" y="810" type="line"/>
+      <point x="208" y="940" type="line"/>
+      <point x="292" y="940" type="line"/>
+      <point x="292" y="810" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w500l149+550l149+0l65+0l65+730l149+730l353+180l355+180l355+730l435+730l435+0l355+0l151+550|l208+810l208+940l292+940l292+810|</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="caron" format="2">
+  <advance width="500"/>
+  <unicode hex="02C7"/>
+  <outline>
+    <contour>
+      <point x="249" y="630" type="line"/>
+      <point x="251" y="630" type="line"/>
+      <point x="332" y="760" type="line"/>
+      <point x="440" y="760" type="line"/>
+      <point x="310" y="590" type="line"/>
+      <point x="190" y="590" type="line"/>
+      <point x="60" y="760" type="line"/>
+      <point x="168" y="760" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w500l249+630l251+630l332+760l440+760l310+590l190+590l60+760l168+760|</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

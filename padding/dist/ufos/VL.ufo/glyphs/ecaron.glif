@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="ecaron" format="2">
+  <advance width="500"/>
+  <unicode hex="011B"/>
+  <outline>
+    <contour>
+      <point x="249" y="630" type="line"/>
+      <point x="251" y="630" type="line"/>
+      <point x="332" y="760" type="line"/>
+      <point x="440" y="760" type="line"/>
+      <point x="310" y="590" type="line"/>
+      <point x="190" y="590" type="line"/>
+      <point x="60" y="760" type="line"/>
+      <point x="168" y="760" type="line"/>
+    </contour>
+    <contour>
+      <point x="138" y="234" type="line"/>
+      <point x="142" y="141"/>
+      <point x="210" y="59"/>
+      <point x="275" y="59" type="qcurve"/>
+      <point x="336" y="59"/>
+      <point x="410" y="95" type="qcurve"/>
+      <point x="410" y="15" type="line"/>
+      <point x="336" y="-10"/>
+      <point x="270" y="-10" type="qcurve"/>
+      <point x="55" y="-10"/>
+      <point x="55" y="260" type="qcurve"/>
+      <point x="55" y="401"/>
+      <point x="155" y="530"/>
+      <point x="255" y="530" type="qcurve"/>
+      <point x="346" y="530"/>
+      <point x="435" y="406"/>
+      <point x="435" y="265" type="qcurve"/>
+      <point x="435" y="254"/>
+      <point x="433" y="234" type="qcurve"/>
+    </contour>
+    <contour>
+      <point x="138" y="300" type="qcurve"/>
+      <point x="356" y="300" type="line"/>
+      <point x="355" y="461"/>
+      <point x="255" y="461" type="qcurve"/>
+      <point x="198" y="461"/>
+      <point x="142" y="389"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>c3a9088992eb170333fce05bc8db196fb770dfd346ce1c0aaf46fd54ea963a07243bc265b1f20794247596d4deedd78f3ba76ec5a2763fefe47ea681e3ed5efa</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

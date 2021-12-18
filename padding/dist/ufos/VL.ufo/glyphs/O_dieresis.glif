@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="Odieresis" format="2">
+  <advance width="500"/>
+  <unicode hex="00D6"/>
+  <outline>
+    <contour>
+      <point x="290" y="810" type="line"/>
+      <point x="290" y="940" type="line"/>
+      <point x="370" y="940" type="line"/>
+      <point x="370" y="810" type="line"/>
+    </contour>
+    <contour>
+      <point x="130" y="810" type="line"/>
+      <point x="130" y="940" type="line"/>
+      <point x="210" y="940" type="line"/>
+      <point x="210" y="810" type="line"/>
+    </contour>
+    <contour>
+      <point x="143" y="740"/>
+      <point x="357" y="740"/>
+      <point x="460" y="571"/>
+      <point x="460" y="159"/>
+      <point x="357" y="-10"/>
+      <point x="143" y="-10"/>
+      <point x="40" y="159"/>
+      <point x="40" y="571"/>
+    </contour>
+    <contour>
+      <point x="206" y="62"/>
+      <point x="294" y="62"/>
+      <point x="348" y="113"/>
+      <point x="380" y="249"/>
+      <point x="380" y="481"/>
+      <point x="348" y="617"/>
+      <point x="294" y="668"/>
+      <point x="206" y="668"/>
+      <point x="152" y="617"/>
+      <point x="120" y="481"/>
+      <point x="120" y="249"/>
+      <point x="152" y="113"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>2edd4d2c271d0952151550df2d0c1d3fafc50e665b0c560ea0e8a4feb286a35960fea77fc6723aa880794d3dd2c1ea9a660b79d24d10534aa5d688240d97c48c</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>

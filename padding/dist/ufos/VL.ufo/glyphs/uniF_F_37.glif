@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="uniFF37" format="2">
+  <advance width="1000"/>
+  <unicode hex="FF37"/>
+  <outline>
+    <contour>
+      <point x="95" y="748" type="line"/>
+      <point x="268" y="123" type="line"/>
+      <point x="270" y="123" type="line"/>
+      <point x="444" y="748" type="line"/>
+      <point x="556" y="748" type="line"/>
+      <point x="730" y="123" type="line"/>
+      <point x="732" y="123" type="line"/>
+      <point x="904" y="748" type="line"/>
+      <point x="993" y="748" type="line"/>
+      <point x="790" y="18" type="line"/>
+      <point x="682" y="18" type="line"/>
+      <point x="501" y="627" type="line"/>
+      <point x="499" y="627" type="line"/>
+      <point x="317" y="18" type="line"/>
+      <point x="209" y="18" type="line"/>
+      <point x="7" y="748" type="line"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>public.truetype.instructions</key>
+      <dict>
+        <key>assembly</key>
+        <string>
+
+</string>
+        <key>formatVersion</key>
+        <string>1</string>
+        <key>id</key>
+        <string>w1000l95+748l268+123l270+123l444+748l556+748l730+123l732+123l904+748l993+748l790+18l682+18l501+627l499+627l317+18l209+18l7+748|</string>
+      </dict>
+    </dict>
+  </lib>
+</glyph>
