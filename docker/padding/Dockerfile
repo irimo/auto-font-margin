@@ -56,6 +56,7 @@ RUN make -j8 && make install && ldconfig
 RUN pip install --upgrade ufo-extractor defcon argparse
 RUN pip3 uninstall -y setuptools
 RUN pip3 install -U setuptools
+RUN pip3 install -U cairosvg
 # RUN git clone https://github.com/typesupply/ufo2svg.git
 # WORKDIR /workspace/ufo2svg
 # RUN python setup.py build
