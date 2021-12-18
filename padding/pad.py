@@ -69,4 +69,12 @@ def ttf_to_svg():
 #     svg_path = "./dist/svgs/"
 #     ufo2svg.convertUFOToSVGFont(ufo_path)
 
-ttf_to_svg()
+# ttf_to_svg()
+
+import glyphsLib
+def ufo_to_png():
+    font = defcon.Font(ufo_path)
+    glyph_a = font["A"]
+    print(glyph_a)
+
+ufo_to_png()
