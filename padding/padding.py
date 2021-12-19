@@ -6,9 +6,23 @@ import numpy as np
 def a_padding(top_per=10, left_per=10, bottom_per=10, right_per=10, ratio=0, zoom=0):
     glyphname = "A"
     path = "./dist/pngs/"+glyphname+".png"
-    img_origin = cv2.imread(path, flags=cv2.IMREAD_GRAYSCALE)
+    img_origin = cv2.imread(path, -1)
     imgheight = img_origin.shape[0]
     imgwidth = img_origin.shape[1]
+
+    a = img_origin[:, :, 3]
+    ex_a = a
+    y = 0
+    for y_count in a:
+        x = 0
+        for x_count in y_count:
+            ex_a[y, x] = abs(a[y, x] - 255)
+            x += 1
+        y += 1
+    img_origin[:, :, 0] = ex_a
+    img_origin[:, :, 1] = ex_a
+    img_origin[:, :, 2] = ex_a
+    img_origin[:, :, 3] = np.full((1, 1), 255)
 
     left_pos = math.floor(imgwidth * left_per / 100)
     top_pos = math.floor(imgheight * top_per / 100)
