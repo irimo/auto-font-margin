@@ -3,7 +3,7 @@ import tensorflow as tf
 import tensorflow_datasets as tfds
 import os
 
-image_size = 100
+image_size = 50
 
 # DATA_URL = os.path.abspath()
 # path = tf.keras.utils.get_file('mnist.npz', DATA_URL)
@@ -58,3 +58,6 @@ print("test loss, test acc:", results)
 print("Generate predictions for 3 samples")
 predictions = model.predict(test_examples[:3])
 print("predictions shape:", predictions.shape)
+for i in range(predictions):
+    print("correct: " + test_labels[i])
+    print("show: " + np.amax(predictions[i]))
