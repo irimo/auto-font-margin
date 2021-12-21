@@ -61,6 +61,9 @@ RUN pip3 install -U cairosvg
 # WORKDIR /workspace/ufo2svg
 # RUN python setup.py build
 # RUN python3 setup.py install
+RUN pip3 install tensorflow
+RUN pip3 install matplotlib
+RUN pip3 install sklearn
 
 WORKDIR /
 RUN rm -rf workspace/
