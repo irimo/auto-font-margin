@@ -1,51 +1,72 @@
 import cv2
-import os
+import os, glob
 import math
 import numpy as np
 
-def a_padding(top_per=10, right_per=10, bottom_per=10, left_per=10):
+
+origin_dir = "./dist/pngs"
+noalpha_dir = "./dist/noapngs"
+girigiri_dir = "./dist/giripng"
+square_dir = "./dist/square"
+angle_dir = "./resource/angle"
+
+# SVG から変換すると透明になるので不透明にする。ついでに縮める
+def alpha_to_noalpha(origin_path):
     glyphname = "A"
-    path = "./dist/pngs/"+glyphname+".png"
-    img_origin_alpya = cv2.imread(path, -1)
-
-    a = img_origin_alpya[:, :, 3]
-    ex_a = a
-    y = 0
-    for y_count in a:
-        x = 0
-        for x_count in y_count:
-            ex_a[y, x] = abs(a[y, x] - 255)
-            x += 1
-        y += 1
-    img_origin_alpya[:, :, 0] = ex_a
-    img_origin_alpya[:, :, 1] = ex_a
-    img_origin_alpya[:, :, 2] = ex_a
-    img_origin_alpya[:, :, 3] = np.full((1, 1), 255)
-    tmp_png_path = "./resource/A_origin_noalpha.png"
-    cv2.imwrite(tmp_png_path, img_origin_alpya)
-
-    img_origin = cv2.imread(tmp_png_path)
+    # origin_path = origin_dir + "/A_0.png"
+    img_origin = cv2.imread(origin_path, -1)
     imgheight = img_origin.shape[0]
     imgwidth = img_origin.shape[1]
+    img_origin_28 = cv2.resize(img_origin, (imgwidth//10, imgheight//10))
 
-    left_pos = math.floor(imgwidth * left_per / 100)
-    top_pos = math.floor(imgheight * top_per / 100)
+    for y in range(img_origin_28.shape[0]):
+        for x in range(img_origin_28.shape[1]):
+            alpha = img_origin_28[y, x, 3]
+            pixel = abs(255-alpha)
+            img_origin_28[y, x, 0] = pixel
+            img_origin_28[y, x, 1] = pixel
+            img_origin_28[y, x, 2] = pixel
+            img_origin_28[y, x, 3] = 255
+    noalpha_path = noalpha_dir + "/" + os.path.basename(origin_path)
+    if not os.path.exists(noalpha_dir):
+        os.mkdir(noalpha_dir)
 
-    new_width = left_pos + imgwidth + math.floor(imgwidth * right_per / 100)
-    new_height = top_pos + imgheight + math.floor(imgheight * bottom_per / 100)
+    cv2.imwrite(noalpha_path, img_origin_28)
 
-    new_img = cv2.resize(np.zeros((1, 1, 3), np.uint8), (new_width, new_height))
-    new_img[:, :, :] = np.full((new_height, new_width,3), 255)
-    new_img[top_pos:(top_pos + imgheight), left_pos:(left_pos + imgwidth)] = img_origin
-
-    dir = "./resource/"+glyphname
-    if not os.path.exists(dir):
-        os.mkdir(dir)
-    cv2.imwrite(dir+"/"+str(top_per)+"_"+str(right_per)+"_"+str(bottom_per)+"_"+str(left_per)+".png", new_img)
-
-def origin_to_square():
+# パディングをギリギリなくす
+def noalpha_to_girigiri(noalpha_path):
     glyphname = "A"
-    png_path = "./resource/A_origin_noalpha.png"
+    # noalpha_path = noalpha_dir + "/A_0.png"
+
+    img_origin = cv2.imread(noalpha_path)
+    imgheight = img_origin.shape[0]
+    imgwidth = img_origin.shape[1]
+    left_x = 0
+    top_y = 0
+    right_x = imgwidth
+    bottom_y = imgheight
+    once_flag = False
+    for y in range(imgheight):
+        for x in range(imgwidth):
+            pixel = img_origin[y, x, 0]
+            if pixel < 255 & once_flag == False:
+                left_x = x
+                top_y = y
+                once_flag = True
+            right_x = x
+            bottom_y = y
+    girigiri_img = cv2.resize(np.zeros((1, 1, 3), np.uint8), (right_x - left_x, bottom_y - top_y))
+    girigiri_img[:, :] = img_origin[top_y:bottom_y, left_x:right_x]
+    girigiri_path = girigiri_dir + "/" + os.path.basename(noalpha_path)
+    if not os.path.exists(girigiri_dir):
+        os.mkdir(girigiri_dir)
+    
+    cv2.imwrite(girigiri_path, girigiri_img)
+
+# ギリギリ画像を正方形にする（？）
+def girigiri_to_square(png_path):
+    glyphname = "A"
+    # png_path = "./resource/A_origin_noalpha.png"
 
     img_origin = cv2.imread(png_path)
     imgheight = img_origin.shape[0]
@@ -64,14 +85,14 @@ def origin_to_square():
         add_padding = math.floor((imgwidth - imgheight) / 2)
         new_img[add_padding:(add_padding + imgheight), :] = img_origin
 
-    dir = "./resource/"+glyphname
-    if not os.path.exists(dir):
-        os.mkdir(dir)
-    cv2.imwrite(dir+"/" + glyphname + "_square.png", new_img)
+    if not os.path.exists(square_dir):
+        os.mkdir(square_dir)
+    cv2.imwrite(square_dir + "/" + os.path.basename(png_path), new_img)
 
-def square_to_ratio(input_angle=45):
+# 正方形画像から、回転をいろんな角度でさせた画像を生成する
+def square_to_ratio(square_path, input_angle):
     glyphname = "A"
-    square_path = "./resource/A/origin/A_square.png"
+    # square_path = "./resource/A/origin/A_square.png"
     img = cv2.imread(square_path)
     #高さを定義
     height = img.shape[0]                         
@@ -88,13 +109,18 @@ def square_to_ratio(input_angle=45):
     trans = cv2.getRotationMatrix2D(center, angle , scale)
     #アフィン変換
     img2 = cv2.warpAffine(img, trans, (width,height), borderValue=(255, 255, 255))
-    dir = "./resource/"+glyphname+"/angle"
+    if not os.path.exists(angle_dir):
+        os.mkdir(angle_dir)
+    dir = angle_dir + "/" + glyphname
     if not os.path.exists(dir):
         os.mkdir(dir)
     dir += "/origin"
     if not os.path.exists(dir):
         os.mkdir(dir)
-    cv2.imwrite(dir+"/" + str(input_angle) + ".png", img2)
+    dir += "/" + str(input_angle)
+    if not os.path.exists(dir):
+        os.mkdir(dir)
+    cv2.imwrite(dir+"/" + os.path.basename(square_path), img2)
 
 def calc_arg_angle(input_angle=0):
     angle = 90 - input_angle
@@ -149,18 +175,38 @@ def various_padding(input_angle=100, side_pixel=20, max_side=100, increment=5):
 #     for side_pixel in range(20, 100, increment):
 #         various_padding(input_angle=input_angle, side_pixel=side_pixel, max_side=100, increment=5)
 # 画像を全部消すとバグる
-def various_image_output():
-    increment = 20
+# def various_image_output():
+#     increment = 20
 
-    origin_to_square()
-    for i in range(180, increment):
-        square_to_ratio(input_angle=i)
-    side_pixel_min = 20
-    max_side = 100
-    for input_angle in range(0,max_side,increment):
-        for side_pixel in range(side_pixel_min,max_side,increment):
-            various_size(input_angle, side_pixel)
-    for input_angle in range(0, 180, increment):
-        for side_pixel in range(20, 100, increment):
-            various_padding(input_angle=input_angle, side_pixel=side_pixel, increment=increment)
-various_image_output()
+#     origin_to_square()
+#     for i in range(180, increment):
+#         square_to_ratio(input_angle=i)
+#     side_pixel_min = 20
+#     max_side = 100
+#     for input_angle in range(0,max_side,increment):
+#         for side_pixel in range(side_pixel_min,max_side,increment):
+#             various_size(input_angle, side_pixel)
+#     for input_angle in range(0, 180, increment):
+#         for side_pixel in range(20, 100, increment):
+#             various_padding(input_angle=input_angle, side_pixel=side_pixel, increment=increment)
+# various_image_output()
+
+def origin_to_square():
+    files = glob.glob(origin_dir + "/*.png")
+    for i, file in enumerate(files):
+        alpha_to_noalpha(file)
+    files = glob.glob(noalpha_dir + "/*.png")
+    for i, file in enumerate(files):
+        noalpha_to_girigiri(file)
+    files = glob.glob(girigiri_dir + "/*.png")
+    for i, file in enumerate(files):
+        girigiri_to_square(file)
+
+def square_2_ratio():
+    increment = 1
+    files = glob.glob(square_dir + "/*.png")
+    for i, file in enumerate(files):
+        # angle = 45
+        for angle in range(0, 180, increment):
+            square_to_ratio(square_path=file, input_angle=angle)
+square_2_ratio()

@@ -5,11 +5,11 @@ import cv2
 from sklearn import model_selection
 import pandas as pd
 
-increment = 20
+increment = 5
 
 classes = range(0,180,increment)
 num_classes = len(classes)
-image_size = 100
+image_size = 28
 
 '''
 XとYはそれぞれ、画像データと、その画像の角度がどれなのかを示すラベル。
@@ -17,14 +17,14 @@ XとYはそれぞれ、画像データと、その画像の角度がどれなの
 X = []
 Y = []
 
-def training_a_ratio(ratio=100):
+def training_a_ratio(ratio):
     glyphname = "A"
     ret_X = []
     ret_Y = []
     # for index, input_angle in enumerate(classes):
         # photos_dir = "./" + classlabel
         # for input_angle in range(0, 180, increment):
-    photos_dir = "./resource/" + glyphname + "/angle/" + str(ratio)
+    photos_dir = "./resource/angle/" + glyphname + "/origin/" + str(ratio)
     files = glob.glob(photos_dir + "/*.png")
     for i, file in enumerate(files):
         # if i >= 141: break # monkey,boar,crowそれぞれのデータ数の最小に合わせる
@@ -60,4 +60,4 @@ Y = np.array(Y)
 
 X_train, X_test, y_train, y_test = model_selection.train_test_split(X, Y)
 xy = (X_train, X_test, y_train, y_test)
-np.save("./dist/training_test.npy", xy)
+np.save("./dist/A_training_inc5.npy", xy)
