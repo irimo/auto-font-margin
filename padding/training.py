@@ -1,13 +1,12 @@
-from PIL import Image
 import os, glob
 import numpy as np
 import cv2
 from sklearn import model_selection
 import pandas as pd
 
-increment = 5
-
-classes = range(0,180,increment)
+increment = 1
+# 82-98
+classes = range(98-82+1)
 num_classes = len(classes)
 image_size = 28
 
@@ -39,17 +38,10 @@ def training_a_ratio(ratio):
                 arr2[y, x] = float(image[y, x, 0] / 255)
         data = np.array(arr2)
         ret_X.append(data)
-        ret_Y.append(ratio)
+        ret_Y.append(ratio - 90)
     # print(ret_X)
     return ret_X, ret_Y
-# def image_flatten(image=[]):
-#     arr1 = image[:, :, 0] # gray
-#     arr2 = []
-#     for y in image.shape(0):
-#         for x in image.shape(1):
-#             arr2[y, x] = arr1[y, x] / 255
-#     arr3 = np.ndarray.flatten(arr2)
-#     return np.array(arr3)
+
 for ratio in range(0, 180, increment):
     tmp_X, tmp_Y = training_a_ratio(ratio=ratio)
     X += tmp_X
@@ -60,4 +52,4 @@ Y = np.array(Y)
 
 X_train, X_test, y_train, y_test = model_selection.train_test_split(X, Y)
 xy = (X_train, X_test, y_train, y_test)
-np.save("./dist/A_training_inc5.npy", xy)
+np.save("./dist/A_training_92-98.npy", xy)

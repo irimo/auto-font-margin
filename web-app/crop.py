@@ -4,16 +4,15 @@ import cv2
 import numpy as np
 import math
 import copy
+import os
 
-def crop():
-    law_path = "./resource/law2.jpg"
+def crop(law_path = "./resource/law1.jpg"):
+    # law_path = "./resource/law1.jpg"
     img_origin = cv2.imread(law_path)
     imgheight = img_origin.shape[0]
     imgwidth = img_origin.shape[1]
     ratio = 7
     padding = 20
-    # img_gray = cv2.cvtColor(img_origin, cv2.COLOR_BGR2GRAY)
-    # 二値化の閾値は画像を見て調整する
     ret, img_binary = cv2.threshold(img_origin, 200, 255,cv2.THRESH_BINARY)
     img_gray_highlight = cv2.cvtColor(img_binary, cv2.COLOR_BGR2GRAY)
     # 縮小
@@ -44,7 +43,7 @@ def crop():
         # crop_image_mini = img_mini[crop_y:crop_y+crop_h, crop_x:crop_x+crop_w]
         crop_image = img_gray_highlight[crop_y:crop_y+crop_h, crop_x:crop_x+crop_w]
         # crop_image = img_gray_color_mini_work[y:y+h,x:x+w]
-        cv2.imwrite("./resource/work/hoge"+str(i)+".jpg", crop_image)
+        cv2.imwrite("./resource/work/" + str(os.path.basename(law_path)).split('.')[0] + "-" + str(i)+".jpg", crop_image)
         # cv2.imshow("Cropped", crop_image)
         i += 1
     
@@ -70,4 +69,5 @@ def UnSharpMasking(gray, tmp_k=3.0):
     blur = cv2.blur(gray, (k, k))
     return blur
 
-crop()
+crop("./resource/law1.jpg")
+crop("./resource/law2.jpg")

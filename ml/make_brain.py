@@ -7,7 +7,7 @@ image_size = 28
 
 # DATA_URL = os.path.abspath()
 # path = tf.keras.utils.get_file('mnist.npz', DATA_URL)
-path = './a_training_inc5.npy'
+path = './A_training_92-98.npy'
 data =  np.load(path, allow_pickle=True)
 # train_examples = data['x_train']
 # test_examples = data['x_test']
@@ -47,7 +47,7 @@ model.compile(optimizer=tf.optimizers.Adam(),
 
 # model.fit(train_examples, train_labels, validation_data=(test_examples, test_labels), epochs=5, steps_per_epoch=BATCH_SIZE)
 model.fit(train_dataset, epochs=5, steps_per_epoch=BATCH_SIZE)
-model.save("./model_cnn.h5")
+model.save("./model_92-98.h5")
 
 # test_loss, test_acc = model.evaluate(test_examples, test_labels, verbose=2)
 results = model.evaluate(test_examples, test_labels, verbose=2)

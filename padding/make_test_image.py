@@ -4,7 +4,7 @@ import numpy as np
 
 size = 28
 
-path = "./resource/test/A_origin.jpg"
+path = "./resource/test/A_origin.png"
 
 # ギリギリ画像を正方形にする（？）
 def girigiri_to_square(png_path):
@@ -68,10 +68,9 @@ def calc_arg_angle(input_angle=0):
     angle = 90 - input_angle
     return float(angle)
 
-
 load_image = girigiri_to_square(path)
-ratio_image = square_to_ratio(load_image, 30)
-image = cv2.resize(ratio_image, (size, size))
+# ratio_image = square_to_ratio(load_image, 30)
+image = cv2.resize(load_image, (size, size))
 # h = image.shape[0]
 # w = image.shape[1]
 arr2 = image[:, :, 0]

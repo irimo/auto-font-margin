@@ -3,10 +3,10 @@ import tensorflow as tf
 import tensorflow_datasets as tfds
 import os
 
-model = tf.keras.models.load_model('./model_cnn.h5')
+model = tf.keras.models.load_model('./model_inc1_20oki_0-180.h5')
 model.summary()
 
-path = './autumn_A.npy'
+path = './A_60.npy'
 img =  np.load(path, allow_pickle=True)
 
 print(img.shape)
