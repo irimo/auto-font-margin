@@ -17,24 +17,24 @@ def page_all():
 def page_several():
     return render_template("several.html")
 
-@app.route('/crop')
-def page_crop():
-    click_x: int = int(request.args.get('x', ''))
-    click_y: int = int(request.args.get('y', ''))
-    law_path = "./resource/law1.jpg"
-    # crop 処理をした後、処理後画像を返す
-    randstr = str(random.randint(1000000000, 10000000000))
-    filename:str = "/resource/work/" + randstr + ".jpg"
-    im = cv2.imread(law_path)
-    im_gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
-    # img[top : bottom, left : right]
-    # サンプル1の切り出し、保存
-    img1 = im_gray[click_y : click_y + 200, click_x: click_x + 200]
-    # random.randrange(3, 8)
-    cv2.imwrite("." + filename, img1)
-    # return cv2.imshow('test', im)
-    # return im.shape
-    return filename
+# @app.route('/crop')
+# def page_crop():
+#     click_x: int = int(request.args.get('x', ''))
+#     click_y: int = int(request.args.get('y', ''))
+#     law_path = "./resource/law1.jpg"
+#     # crop 処理をした後、処理後画像を返す
+#     randstr = str(random.randint(1000000000, 10000000000))
+#     filename:str = "/resource/work/" + randstr + ".jpg"
+#     im = cv2.imread(law_path)
+#     im_gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
+#     # img[top : bottom, left : right]
+#     # サンプル1の切り出し、保存
+#     img1 = im_gray[click_y : click_y + 200, click_x: click_x + 200]
+#     # random.randrange(3, 8)
+#     cv2.imwrite("." + filename, img1)
+#     # return cv2.imshow('test', im)
+#     # return im.shape
+#     return filename
 
 @app.route('/rinkaku')
 def page_rinkaku():
