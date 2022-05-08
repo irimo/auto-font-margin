@@ -3,7 +3,7 @@ import tensorflow as tf
 import tensorflow_datasets as tfds
 import os
 
-model = tf.keras.models.load_model('./model_inc1_20oki_0-180.h5')
+model = tf.keras.models.load_model('./model_mnist.h5')
 model.summary()
 
 path = './A_60.npy'

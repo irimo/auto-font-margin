@@ -1,35 +1,17 @@
-#ライブラリインポート
-import pyocr
-from PIL import Image, ImageEnhance
+from pytesseract import pytesseract
+from PIL import Image
 import os
 
-#Pah設定
-# TODO: docker のパスを探る
-TESSERACT_PATH = 'C:\\Users\\・・・・\\Tesseract-OCR' #インストールしたTesseract-OCRのpath
-TESSDATA_PATH = 'C:\\Users\\・・・・\\Tesseract-OCR\\tessdata' #tessdataのpath
+if __name__ == '__main__':
 
-os.environ["PATH"] += os.pathsep + TESSERACT_PATH
-os.environ["TESSDATA_PREFIX"] = TESSDATA_PATH
+    # for imgid in range(1, 5):
+    img = Image.open(os.path.dirname(os.path.abspath(__file__)) + "/miyazawa.jpg", "r");
 
-#OCRエンジン取得
-tools = pyocr.get_available_tools()
-tool = tools[0]
+    # インストールしたtesseractコマンドのパス
+    pytesseract.tesseract_cmd = "/usr/bin/tesseract";
 
-#OCRの設定 ※tesseract_layout=6が精度には重要。デフォルトは3
-builder = pyocr.builders.TextBuilder(tesseract_layout=6)
+    # -psm 8は1文字判定のフラグ
+    result = pytesseract.image_to_string(img, config="--psm 10", lang="eng");
+    # result = pytesseract.image_to_string(crop, config="--psm 10", lang="eng+jpn");
 
-#解析画像読み込み(雨ニモマケズ)
-img = Image.open('miyazawa.png') #他の拡張子でもOK
-
-#適当に画像処理(何もしないと結構制度悪いです・・)
-img_g = img.convert('L') #Gray変換
-enhancer= ImageEnhance.Contrast(img_g) #コントラストを上げる
-img_con = enhancer.enhance(2.0) #コントラストを上げる
-
-#画像からOCRで日本語を読んで、文字列として取り出す
-txt_pyocr = tool.image_to_string(img_con , lang='jpn', builder=builder)
-
-#半角スペースを消す ※読みやすくするため
-txt_pyocr = txt_pyocr.replace(' ', '')
-
-print(txt_pyocr)
+    print(result);
