@@ -1,4 +1,4 @@
-docker build . -t web-app
-docker run -it -p 5000:5000 -v $(pwd)/:/home web-app
+docker buildx build --platform linux/amd64 . -t web-app
+docker run --rm -it -p 5000:5000 -v $(pwd)/:/home web-app --platform linux/amd64
 <!-- python3 app.py -->
 python3 crop.py

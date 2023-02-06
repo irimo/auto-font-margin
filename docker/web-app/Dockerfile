@@ -47,14 +47,25 @@ WORKDIR /workspace/opencv-${version}/build
 
 ## make opencv
 RUN cmake -OPENCV_EXTRA_MODULES_PATH=/workspace/opencv_contrib-${version}/modules ..
-RUN make -j8 && make install && ldconfig
+# RUN make -j8
+RUN make install 
+RUN ldconfig
 
 WORKDIR /
 RUN rm -rf workspace/
 
 
-RUN pip3 install flask
+# RUN pip3 install flask
 
 
-# Docker内で
-WORKDIR /home
+ENV FLASK_APP=app.py
+ENV FLASK_RUN_HOST=0.0.0.0
+
+COPY requirements.txt ./
+
+RUN pip install --upgrade pip
+RUN pip install --upgrade setuptools
+RUN pip install -r requirements.txt
+
+COPY . .
+CMD ["flask", "run"]
