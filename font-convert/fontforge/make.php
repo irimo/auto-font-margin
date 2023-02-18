@@ -11,10 +11,11 @@ $n = hexdec("21");
 // $n_max = hexdec("7e");
 $files["u0021"] = "./maked_fonts/raw/exclamation.jpg";
 
+// 理想はこうしたいので草稿
 // for($i=$n; $i<=$n_max; $i++) {
 //     $files["u00".dechex($i)] = "./maked_fonts/raw/A.jpg";
 // }
-/*
+
 // A-Z u0041-u005a
 $n = 41;
 // これ for で回せないの...
@@ -46,6 +47,7 @@ $files["u00".dechex(++$n)] = "./maked_fonts/raw/Y.jpg";
 $files["u00".dechex(++$n)] = "./maked_fonts/raw/Z.jpg";
 
 // a-z u0061-u007a
+// 大文字も小文字も同じにする時
 $n = 41;
 for($n2=hexdec("61"); $n2<=hexdec("7a"); $n2++) {
     $files["u00".dechex($n2)] = $files["u00".dechex($n++)];
@@ -63,7 +65,7 @@ $files["u003f"] = "./maked_fonts/raw/question.jpg";
 $files["u002c"] = "./maked_fonts/raw/colon.jpg";
 // .
 $files["u002e"] = "./maked_fonts/raw/dot.jpg";
-*/
+
 
 $filepath = MakeFont::make($filename, $fontname_e, $authorname, $files);
 if(file_exists($filepath) === true){
